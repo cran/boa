@@ -25,7 +25,7 @@ function(bins = boa.par("gandr.bins"), win = boa.par("gandr.win"),
       Rp <- spline(x, Rp[idx])
       Rmax <- spline(x, Rmax[idx])
       ylim <- range(1, Rp$y, Rmax$y)
-      plot(Rmax, xlab = "Last Iteration in Segment", ylab = "Shrink Factors",
+      plot(Rmax, xlab = "Last Iteration in Segment", ylab = "Shrink Factor",
            ylim = ylim, type = "l")
       lines(Rp, lty = 2)
       abline(1, 0, lty = 3)

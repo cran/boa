@@ -29,8 +29,8 @@ function(pname, bins = boa.par("gandr.bins"),
       R <- spline(x, R[idx])
       Rq <- spline(x, Rq[idx])
       ylim <- range(1, R$y, Rq$y)
-      plot(R, xlab = "Last Iteration in Segment", ylab = pname,
-           ylim = ylim, type = "l")
+      plot(R, xlab = "Last Iteration in Segment", ylab = "Shrink Factor",
+           main = pname, ylim = ylim, type = "l")
       lines(Rq, lty = 2)
       abline(1, 0, lty = 3)
       usr <- par("usr")

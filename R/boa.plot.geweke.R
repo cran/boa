@@ -21,8 +21,8 @@ function(lname, pname, bins = boa.par("geweke.bins"),
          drawn <- TRUE
          q.upper <- qnorm(1 - alpha / 2)
          ylim <- range(y, -q.upper, q.upper, na.rm = TRUE)
-         plot(x, y, xlab = "First Iteration in Segment", ylab = pname,
-              ylim = ylim)
+         plot(x, y, xlab = "First Iteration in Segment", ylab = "Z-Score",
+              main = pname, xlim=c(riter[1], max(x[!is.na(y)])), ylim = ylim)
          abline(q.upper, 0, lty = 2)
          abline(0, 0)
          abline(-q.upper, 0, lty = 2)

@@ -125,7 +125,7 @@ boa.init <- function(recover = FALSE)
             list(name     = "BOA",
                   major    = 1,
                   minor    = 1,
-                  revision = 3,
+                  revision = 4,
                   system   = version$system), envir = globalenv())
       boa.license()
    }
