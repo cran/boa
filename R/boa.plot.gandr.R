@@ -1,0 +1,44 @@
+"boa.plot.gandr" <-
+function(pname, bins = boa.par("gandr.bins"),
+                           alpha = boa.par("alpha"),
+                           win = boa.par("gandr.win"))
+#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
+{
+   drawn <- FALSE
+   work <- boa.chain("work")
+   work.support <- boa.chain("work.support")
+   riter <- NULL
+   for(i in names(work)) {
+      if(is.element(pname, boa.pnames(work[[i]])))
+         riter <- range(riter, boa.iter(work[[i]]))
+   }
+   x <- unique(round(seq(min(riter[1] + 49, riter[2]), riter[2],
+                         length = bins)))
+   R <- NULL
+   Rq <- NULL
+   for(i in x) {
+      result <- boa.chain.gandr(work, work.support, alpha, pname, win, i)
+      R <- c(R, result$csrf[1, 1])
+      Rq <- c(Rq, result$csrf[1, 2])
+   }
+   idx <- is.finite(R)
+   if(any(idx)) {
+      drawn <- TRUE
+      x <- x[idx]
+      R <- spline(x, R[idx])
+      Rq <- spline(x, Rq[idx])
+      ylim <- range(1, R$y, Rq$y)
+      plot(R, xlab = "Last Iteration in Segment", ylab = "Shrink Factor",
+           ylim = ylim, type = "l")
+      lines(Rq, lty = 2)
+      abline(1, 0, lty = 3)
+      usr <- par("usr")
+      key(x = usr[2], y = ylim[2], corner = c(1, 1),
+          text = list(c(pname, 1 - alpha / 2, "Median")),
+          lines = list(lty = 3:1), type = c("n", "l", "l"), transparent = TRUE)
+      title("Gelman & Rubin Shrink Factors")
+   }
+
+   return(drawn)
+}
