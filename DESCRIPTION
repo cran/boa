@@ -1,6 +1,6 @@
 Package: boa
-Version: 1.1.4-3
-Date: 2005-02-14
+Version: 1.1.5-1
+Date: 2005-03-23
 Title: Bayesian Output Analysis Program (BOA) for MCMC
 Author: Brian J. Smith
 Maintainer: Brian J. Smith <brian-j-smith@uiowa.edu>
@@ -10,4 +10,4 @@ Description: A menu-driven program and library of functions for carrying out
     chain Monte Carlo sampling output.
 License: GPL version 2 or newer
 URL: http://www.public-health.uiowa.edu/boa
-Packaged: Mon Feb 14 19:04:19 2005; bjsmith
+Packaged: Wed Mar 23 19:37:08 2005; bjsmith

@@ -26,7 +26,7 @@ function()
                  value <- scan(what = "", n = 1, strip.white = TRUE)
                  if(length(value) > 0) {
                     dev.print(device = postscript,
-                              file = paste(boa.par("path"), value, sep = ""))
+                              file = paste(boa.par("path"), value, sep = "/"))
                  }
                },
          "6" = boa.plot.close(),

@@ -74,8 +74,8 @@ function(chain, chain.support, alpha, pnames, window, to)
       csrf <- sqrt((df.v + 3) / (df.v + 1) * cbind(v / w, (1 - 1 / n) +
                    qf(q.upper, m - 1, df.w) * (1 + 1 / m) * b / (n * w)))
       dimnames(csrf) <- list(pnames, c("Estimate", q.upper))
-      mpsrf <- sqrt((1 - 1 / n) + (1 + 1 / m) * eigen(solve(W) %*% B / n,
-                    symmetric = TRUE, only.values = TRUE)$values[1])
+      mpsrf <- sqrt((1 - 1 / n) + (1 + 1 / p) * eigen(qr.solve(W, B / n),
+                    symmetric = FALSE, only.values = TRUE)$values[1])
       result <- list(psrf = psrf, csrf = csrf, mpsrf = mpsrf,
                      window = range(keep))
    }
