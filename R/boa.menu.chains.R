@@ -29,10 +29,9 @@ function()
                  lnames <- names(boa.chain("master"))
                  names(lnames) <- seq(lnames)
                  print(lnames)
-                 cat("\nSpecify chain index or vector of indices [none]\n")
-                 value <- scan(what = "", n = 1, sep = "\n")
+                 value <- boa.getinput("\nSpecify chain index or vector of indices [none]\n")
                  if(length(value) > 0)
-                    boa.chain.del(lnames = lnames[eval(parse(text = value))])
+                    boa.chain.del(lnames = lnames[value])
                },
          "5" = { chain.args <- list()
                  info <- boa.chain.info(boa.chain("work"),
@@ -48,32 +47,30 @@ function()
                      "-------\n\n", sep = "")
                  names(info$lnames) <- seq(info$lnames)
                  print(info$lnames)
-                 cat("\nSpecify chain indices [all]\n")
-                 value <- scan(what = "", n = 1, sep = "\n")
+                 value <- boa.getinput("\nSpecify chain indices [all]\n")
                  if(length(value) > 0) {
-                    lnames <- info$lnames[eval(parse(text = value))]
+                    lnames <- info$lnames[value]
                     chain.args$lnames <- lnames
                  } else {
                     lnames <- info$lnames
                  }
+
                  cat("\nParameters:\n",
                      "-----------\n\n", sep = "")
                  info$pnames <- unique(unlist(info$pnames[lnames]))
                  names(info$pnames) <- seq(info$pnames)
                  print(info$pnames)
-                 cat("\nSpecify parameter indices [all]\n")
-                 value <- scan(what = "", n = 1, sep = "\n")
-                 if(length(value) > 0) {
-                    value <- eval(parse(text = value))
+                 value <- boa.getinput("\nSpecify parameter indices [all]\n")
+                 if(length(value) > 0)
                     chain.args$pnames <- info$pnames[value]
-                 }
+
                  cat("\nIterations:\n",
                      "+++++++++++\n\n", sep = "")
                  print(info$iter.range[lnames, , drop = FALSE])
-                 cat("\nSpecify iterations [all]\n")
-                 value <- scan(what = "", n = 1, sep = "\n")
+                 value <- boa.getinput("\nSpecify iterations [all]\n")
                  if(length(value) > 0)
-                    chain.args$iter <- eval(parse(text = value))
+                    chain.args$iter <- value
+
                  do.call("boa.chain.subset", args = chain.args)
                },
          "6" = NULL

@@ -1,4 +1,5 @@
 \name{boa-internal}
+\alias{boa.getinput}
 \alias{boa.menu.analysis}
 \alias{boa.menu.chains}
 \alias{boa.menu.coda}
@@ -13,12 +14,12 @@
 \alias{boa.menu.setpar}
 \alias{boa.menu.stats}
 \alias{boa.menu.window}
-\alias{key}
 
 \title{Internal BOA Functions}
 \description{Internal BOA functions}
 
 \usage{
+boa.getinput(message, n = 1, evaluate = TRUE)
 boa.menu.analysis()
 boa.menu.chains()
 boa.menu.coda()
@@ -33,13 +34,6 @@ boa.menu.plotdesc()
 boa.menu.setpar(group)
 boa.menu.stats()
 boa.menu.window()
-key(x = c(par("usr")[1:2] %*% c(0.01, 0.99)),
-y = c(par("usr")[3:4] %*% c(0.01, 0.99)), ..., title = "", align = TRUE,
-background = 0, border = 0, between = 1, corner = c(missing(x), 1), divide = 3,
-transparent = FALSE, cex = par("cex"), cex.title = max(cex), col = par("col"),
-lty = par("lty"), lwd = par("lwd"), font = par("font"), pch = par("pch"),
-adj = 0, type = "l", size = 5, columns = 1, between.columns = 3, angle = 0,
-density = -1, plot = TRUE, text.width.multiplier = 1)
 }
 
 \details{These are not to be called by the user}

@@ -19,22 +19,15 @@ function(group)
    if(length(idx) > 0) {
       cat("\n")
       idx <- as.numeric(idx)
-      if(nchar(par.notes[idx]))  cat("NOTE:", par.notes[idx], "\n")
+      if(nchar(par.notes[idx]))  cat("DESCRIPTION:", par.notes[idx], "\n")
       switch(data.class(boa.par(par.names[idx])),
-         "numeric"   = { cat("Enter new numeric value\n")
-                         value <- eval(parse(text = scan(what = "", n = 1,
-                                  sep = "\n")))
-                       },
-         "character" = { cat("Enter new character string\n")
+         "numeric"   = value <- boa.getinput("\nEnter new numeric value\n"),
+         "character" = { cat("\nEnter new character string\n")
                          value <- scan(what = "", n = 1, sep = "\n")
                        },
-         "logical"   = { cat("Enter new logical value\n")
-                         value <- eval(parse(text = scan(what = "", n = 1)))
-                       },
-         "function"  = { cat("Enter new function followed by a blank line\n")
-                         value <- eval(parse(text = paste(scan(what = "",
-                                  sep = "\n"), collapse = "\n")))
-                       },
+         "logical"   = value <- boa.getinput("\nEnter new logical value\n"),
+         "function"  = value <- boa.getinput("\nEnter new function followed by a blank line\n",
+                                             n = -1),
          value <- NULL
       )
       boa.par(structure(list(value), names = par.names[idx]))

@@ -3,7 +3,7 @@ function(lname, pname, bins = boa.par("geweke.bins"),
                             p.first = boa.par("geweke.first"),
                             p.last = boa.par("geweke.last"),
                             alpha = boa.par("alpha"),
-                            legend = boa.par("legend"))
+                            annotate = boa.par("legend"))
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 {
@@ -27,9 +27,9 @@ function(lname, pname, bins = boa.par("geweke.bins"),
          abline(0, 0)
          abline(-q.upper, 0, lty = 2)
          usr <- par("usr")
-         if(legend) key(x = usr[2], y = ylim[2], corner = c(1, 1),
-                        text = substring(lname, first = 1, last = 16),
-                        adj = 1, transparent = TRUE)
+         if(annotate)
+            legend(x = usr[2], y = ylim[2], xjust = 1, yjust = 1,
+                   legend = substring(lname, first = 1, last = 16), bty = "n")
       }
    }
 

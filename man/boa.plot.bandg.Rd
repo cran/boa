@@ -9,7 +9,7 @@
 }
 \usage{
 boa.plot.bandg(bins = boa.par("gandr.bins"), win = boa.par("gandr.win"),
-legend = boa.par("legend"))
+annotate = boa.par("legend"))
 }
 
 \arguments{
@@ -21,7 +21,7 @@ legend = boa.par("legend"))
   are used to interpolate through the point estimates for each segment.}
   \item{win}{Proportion of iterations to include in the Brooks, Gelman, and 
   Rubin Statistics.}
-  \item{legend}{Logical value indicating that a legend be included in the plot.}
+  \item{annotate}{Logical value indicating that a legend be included in the plot.}
 }
 
 \value{

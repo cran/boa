@@ -7,7 +7,7 @@
   appear in the columns and rows, respectively, of the file. The variable names
   must be given in the first row. The iteration numbers are taken from the the
   column entitled "iter" (case-sensitive), if it exists; otherwise, the numbers 
-  1..n are used, where n is the number of row. The columns may be separated by 
+  1..n are used, where n is the number of rows. The columns may be separated by
   white space or tabs.
 }
 \usage{
@@ -31,6 +31,7 @@ returned matrix. Otherwise, NULL is returned.
 
 \author{Brian J. Smith}
 
-\seealso{ \code{\link{boa.chain.import}}, \code{\link{boa.importBUGS}} }
+\seealso{ \code{\link{boa.chain.import}}, \code{\link{boa.importBUGS}},
+   \code{\link{boa.importMatrix}} }
 
 \keyword{internal}

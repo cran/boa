@@ -7,14 +7,14 @@
   specified parameter(s).
 }
 \usage{
-boa.plot.history(lnames, pname, legend = boa.par("legend"))
+boa.plot.history(lnames, pname, annotate = boa.par("legend"))
 }
 
 \arguments{
   \item{lnames}{Character vector giving the name of the desired MCMC sequence 
   in the working session list of sequences.}
   \item{pname}{Character vector giving the names of the parameters to be plotted.}
-  \item{legend}{Logical value indicating that a legend be included in the plot.}
+  \item{annotate}{Logical value indicating that a legend be included in the plot.}
 }
 
 \value{

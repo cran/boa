@@ -16,9 +16,9 @@ function()
    while(idx > 0) {
       sync <- boa.chain("work.sync")
       if(sync) {
-         choices[5] <- "*****                      |"
+         choices[7] <- "*****                      |"
       } else {
-         choices[5] <- "Reset                      |"
+         choices[7] <- "Reset                      |"
       }
       idx <- menu(choices, title = mtitle)
       switch(idx,

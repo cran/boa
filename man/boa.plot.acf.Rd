@@ -6,14 +6,14 @@
   Creates a single plot of the lag autocorrelations for a specified parameter.
 }
 \usage{
-boa.plot.acf(lname, pname, legend = boa.par("legend"))
+boa.plot.acf(lname, pname, annotate = boa.par("legend"))
 }
 
 \arguments{
   \item{lname}{Character string giving the name of the desired MCMC sequence in 
   the working session list of sequences.}
   \item{pname}{Character string giving the name of the parameter to be plotted.}
-  \item{legend}{Logical value indicating that a legend be included in the plot.}
+  \item{annotate}{Logical value indicating that a legend be included in the plot.}
 }
 
 \value{

@@ -8,7 +8,7 @@
 }
 \usage{
 boa.plot.density(lnames, pname, bandwidth = boa.par("bandwidth"),
-window = boa.par("kernel"), legend = boa.par("legend"))
+window = boa.par("kernel"), annotate = boa.par("legend"))
 }
 
 \arguments{
@@ -23,7 +23,7 @@ window = boa.par("kernel"), legend = boa.par("legend"))
   \item{window}{Character string giving the type of window used in estimating 
   the density functions for the parameters. Available choices are "cosine", 
   "gaussian", "rectangular", or "triangular".}
-  \item{legend}{Logical value indicating that a legend be included in the plot.}
+  \item{annotate}{Logical value indicating that a legend be included in the plot.}
 }
 
 \value{

@@ -1,5 +1,5 @@
 "boa.plot.acf" <-
-function(lname, pname, legend = boa.par("legend"))
+function(lname, pname, annotate = boa.par("legend"))
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 {
@@ -12,9 +12,9 @@ function(lname, pname, legend = boa.par("legend"))
            ylim = c(-1, 1), type = "h")
       abline(0, 0)
       usr <- par("usr")
-      if (legend) key(x = usr[2], y = 1, corner = c(1, 1),
-                      text = substring(lname, first = 1, last = 16),
-                      adj = 1, transparent = TRUE)
+      if (annotate)
+         legend(x = usr[2], y = 1, xjust = 1, yjust = 1,
+                legend = substring(lname, first = 1, last = 16), bty = "n")
    }
 
    return(drawn)

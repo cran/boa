@@ -1,7 +1,7 @@
 "boa.plot.gandr" <-
 function(pname, bins = boa.par("gandr.bins"),
          alpha = boa.par("alpha"), win = boa.par("gandr.win"),
-         legend = boa.par("legend"))
+         annotate = boa.par("legend"))
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 {
@@ -34,9 +34,10 @@ function(pname, bins = boa.par("gandr.bins"),
       lines(Rq, lty = 2)
       abline(1, 0, lty = 3)
       usr <- par("usr")
-      if(legend) key(x = usr[2], y = ylim[2], corner = c(1, 1),
-                     text = list(c(paste(100 * (1 - alpha / 2), "%", sep=""), "Median")),
-                     lines = list(lty = 2:1), transparent = TRUE)
+      if(annotate)
+         legend(x = usr[2], y = ylim[2], xjust = 1, yjust = 1,
+                legend = c(paste(100 * (1 - alpha / 2), "%", sep=""), "Median"),
+                lty = 2:1, bty = "n")
    }
 
    return(drawn)

@@ -7,10 +7,7 @@ function(prefix, path = boa.par("path"), type = "ASCII")
    switch(type,
       "ASCII" = link <- boa.importASCII(prefix, path),
       "BUGS"  = link <- boa.importBUGS(prefix, path),
-      "S"     = if(length(prefix) && exists(prefix))
-                   link <- as.matrix(get(prefix))
-                else
-                   cat("Warning: could not find object", prefix, "to import.\n"),
+      "S"     = link <- boa.importMatrix(prefix),
       cat("Warning: import type not supported\n")
    )
 

@@ -8,7 +8,7 @@
 }
 \usage{
 boa.plot.gandr(pname, bins = boa.par("gandr.bins"), alpha = boa.par("alpha"),
-win = boa.par("gandr.win"), legend = boa.par("legend"))
+win = boa.par("gandr.win"), annotate = boa.par("legend"))
 }
 
 \arguments{
@@ -25,7 +25,7 @@ win = boa.par("gandr.win"), legend = boa.par("legend"))
   the shrink factor.}
   \item{win}{Proportion of iterations to include in the Brooks, Gelman, and 
   Rubin Statistics.}
-  \item{legend}{Logical value indicating that a legend be included in the plot.}
+  \item{annotate}{Logical value indicating that a legend be included in the plot.}
 }
 
 \value{

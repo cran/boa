@@ -1,6 +1,6 @@
 "boa.plot.bandg" <-
 function(bins = boa.par("gandr.bins"), win = boa.par("gandr.win"),
-         legend = boa.par("legend"))
+         annotate = boa.par("legend"))
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 {
@@ -30,9 +30,9 @@ function(bins = boa.par("gandr.bins"), win = boa.par("gandr.win"),
       lines(Rp, lty = 2)
       abline(1, 0, lty = 3)
       usr <- par("usr")
-      if(legend) key(x = usr[2], y = ylim[2], corner = c(1, 1),
-                     text = list(c("Rp", "Rmax")), lines = list(lty = c(2, 1)),
-                     transparent = TRUE)
+      if(annotate)
+         legend(x = usr[2], y = ylim[2], xjust = 1, yjust = 1,
+                legend = c("Rp", "Rmax"), lty = c(2, 1), bty = "n")
    }
 
    return(drawn)

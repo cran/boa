@@ -1,7 +1,7 @@
 "boa.plot.density" <-
 function(lnames, pname, bandwidth = boa.par("bandwidth"),
                              window = boa.par("kernel"),
-                             legend = boa.par("legend"))
+                             annotate = boa.par("legend"))
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 {
@@ -38,9 +38,9 @@ function(lnames, pname, bandwidth = boa.par("bandwidth"),
             points(parm, rep(0, length(parm)), pch = k)
          }
       }
-      if(legend) key(x = xlim[2], y = ylim[2], corner = c(1, 1),
-                     text = list(key.names), lines = list(lty = 1:k),
-                     transparent = TRUE)
+      if(annotate)
+         legend(x = xlim[2], y = ylim[2], xjust = 1, yjust = 1,
+                legend = key.names, lty = 1:k, bty = "n")
    }
 
    return(drawn)

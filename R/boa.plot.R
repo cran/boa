@@ -92,7 +92,7 @@ function(type, dev = boa.par("dev"), mfdim = boa.par("plot.mfdim"),
       ratio <- mfdim[imin] / mfdim[imax]
       for(i in 1:n) {
          if((size == 1) || ((i %% size) == 1)) {
-            boa.plot.open(dev)
+            boa.plot.open()
             nleft <- n - i + 1
             while((nleft <= prod(newdim)) && (i == 1)) {
                if(newdim[1] > 1) {

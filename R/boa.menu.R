@@ -3,12 +3,12 @@ function(recover = FALSE)
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 {
-   if(!recover) {
-      boa.init()
-      cat("NOTE: if the menu unexpectedly terminates, type \"boa.menu(recover",
-          "= TRUE)\" to\n",
-          "restart and recover your work\n", sep = "")
-   }
+   boa.init(recover)
+   if(!recover)
+      cat("NOTE: if the event of a menu system crash, type\n",
+          "\"boa.menu(recover = TRUE)\" to restart and recover your work.\n",
+          sep = "")
+
    mtitle <- "\nBOA MAIN MENU\n*************"
    choices <- c("File     >>", "Data     >>", "Analysis >>", "Plot     >>",
                 "Options  >>", "Window   >>")

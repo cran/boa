@@ -1,5 +1,5 @@
 "boa.plot.trace" <-
-function(lnames, pname, legend = boa.par("legend"))
+function(lnames, pname, annotate = boa.par("legend"))
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 {
@@ -27,8 +27,9 @@ function(lnames, pname, legend = boa.par("legend"))
             lines(boa.iter(work[[i]]), work[[i]][, j], lty = k)
          }
       }
-      if(legend) key(x = xlim[2], y = ylim[2], corner = c(1, 1),
-        text = list(key.names), lines = list(lty = 1:k), transparent = TRUE)
+      if(annotate)
+         legend(x = xlim[2], y = ylim[2], xjust = 1, yjust = 1,
+                legend = key.names, lty = 1:k, bty = "n")
    }
 
    return(drawn)
