@@ -1,5 +1,6 @@
 ## export functions
 export(
+   boa.acf,
    boa.chain,
    boa.chain.add,
    boa.chain.collapse,
@@ -29,8 +30,8 @@ export(
    boa.plot.geweke,
    boa.plot.history,
    boa.plot.par,
-   boa.plot.trace,
    boa.plot.title,
+   boa.plot.trace,
    boa.print.acf,
    boa.print.cor,
    boa.print.gandr,
@@ -45,6 +46,3 @@ export(
    boa.save,
    boa.stats
 )
-
-## export data
-export(line)
