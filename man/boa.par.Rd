@@ -68,7 +68,7 @@ boa.par(...)
   \item{plot.new = F}{Logical value indicating that a new graphics window be 
   automatically opened upon successive calls to boa.plot(). Otherwise, previous 
   graphics windows will be closed.}
-  \item{plot.onelink = F}{Logical value indicating that each plot should include 
+  \item{plot.onelink = FALSE}{Logical value indicating that each plot should include 
   only one MCMC sequence. Otherwise, all sequences are displayed on the same plot.}
   \item{quantiles = c(0.025, 0.5, 0.975)}{Vector of probabilities at which to 
   compute the quantiles. Values must be between 0 and 1.}
@@ -78,8 +78,8 @@ boa.par(...)
   convergence diagnostics.}
   \item{randl.q = 0.025}{Quantile to be estimated in computing the Raftery and 
   Lewis convergence diagnostics.}
-  \item{title = "Bayesian Output Analysis"}{Character string to be used as the 
-  title for the analysis.}
+  \item{title = TRUE}{Logical value indicating that a title be added to the
+  plots.}
 }}
 
 \value{

@@ -7,7 +7,7 @@
   line segments for a parameter in an MCMC sequence.
 }
 \usage{
-boa.plot.geweke(lname, pname, bins = boa.par("geweke.bins"), p.first = boa.par("geweke.first"), p.last = boa.par("geweke.last"), alpha = boa.par("alpha"))
+boa.plot.geweke(lname, pname, bins = boa.par("geweke.bins"), p.first = boa.par("geweke.first"), p.last = boa.par("geweke.last"), alpha = boa.par("alpha"), legend = boa.par("legend"))
 }
 
 \arguments{
@@ -23,6 +23,7 @@ boa.plot.geweke(lname, pname, bins = boa.par("geweke.bins"), p.first = boa.par("
   \item{p.first}{Proportion of iterations to include in the first window.}
   \item{p.last}{Proportion of iterations to include in the last window.}
   \item{alpha}{Alpha level for the rejection region lines drawn on the graph.}
+  \item{legend}{Logical value indicating that a legend be included in the plot.}
 }
 
 \value{

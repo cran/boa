@@ -39,8 +39,8 @@ function(lnames, pname, bandwidth = boa.par("bandwidth"),
          }
       }
       if(legend) key(x = xlim[2], y = ylim[2], corner = c(1, 1),
-        text = list(key.names), lines = list(lty = 1:k), transparent = TRUE)
-      title("Density Plot")
+                     text = list(key.names), lines = list(lty = 1:k),
+                     transparent = TRUE)
    }
 
    return(drawn)

@@ -35,7 +35,6 @@ function(lnames, pname, legend = boa.par("legend"))
       }
       if(legend) key(x = xlim[2], y = ylim[2], corner = c(1, 1),
         text = list(key.names), lines = list(lty = 1:k), transparent = TRUE)
-      title("Running Mean Plot")
    }
 
    return(drawn)

@@ -7,7 +7,8 @@
   line segments for a parameter in an MCMC sequence.
 }
 \usage{
-boa.plot.gandr(pname, bins = boa.par("gandr.bins"), alpha = boa.par("alpha"), win = boa.par("gandr.win"))
+boa.plot.gandr(pname, bins = boa.par("gandr.bins"), alpha = boa.par("alpha"),
+win = boa.par("gandr.win"), legend = boa.par("legend"))
 }
 
 \arguments{
@@ -24,6 +25,7 @@ boa.plot.gandr(pname, bins = boa.par("gandr.bins"), alpha = boa.par("alpha"), wi
   the shrink factor.}
   \item{win}{Proportion of iterations to include in the Brooks, Gelman, and 
   Rubin Statistics.}
+  \item{legend}{Logical value indicating that a legend be included in the plot.}
 }
 
 \value{

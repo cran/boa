@@ -2,7 +2,8 @@
 function(lname, pname, bins = boa.par("geweke.bins"),
                             p.first = boa.par("geweke.first"),
                             p.last = boa.par("geweke.last"),
-                            alpha = boa.par("alpha"))
+                            alpha = boa.par("alpha"),
+                            legend = boa.par("legend"))
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 {
@@ -20,16 +21,15 @@ function(lname, pname, bins = boa.par("geweke.bins"),
          drawn <- TRUE
          q.upper <- qnorm(1 - alpha / 2)
          ylim <- range(y, -q.upper, q.upper, na.rm = TRUE)
-         plot(x, y, xlab = "First Iteration in Segment", ylab = "Z-Score",
+         plot(x, y, xlab = "First Iteration in Segment", ylab = pname,
               ylim = ylim)
          abline(q.upper, 0, lty = 2)
          abline(0, 0)
          abline(-q.upper, 0, lty = 2)
          usr <- par("usr")
-         key(x = usr[2], y = ylim[2], corner = c(1, 1),
-             text = paste(pname, ":", substring(lname, first = 1,
-                         last = 16)), adj = 1, transparent = TRUE)
-         title("Geweke Convergence Diagnostic")
+         if(legend) key(x = usr[2], y = ylim[2], corner = c(1, 1),
+                        text = substring(lname, first = 1, last = 16),
+                        adj = 1, transparent = TRUE)
       }
    }
 

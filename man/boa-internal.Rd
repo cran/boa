@@ -1,4 +1,4 @@
-\name{survival-internal}
+\name{boa-internal}
 \alias{boa.menu.analysis}
 \alias{boa.menu.chains}
 \alias{boa.menu.coda}

@@ -9,7 +9,9 @@
   adding titles.
 }
 \usage{
-boa.plot(type, dev = boa.par("dev"), mfdim = boa.par("plot.mfdim"), newplot = boa.par("plot.new"), onelink = boa.par("plot.onelink"))
+boa.plot(type, dev = boa.par("dev"), mfdim = boa.par("plot.mfdim"),
+newplot = boa.par("plot.new"), onelink = boa.par("plot.onelink"),
+title = boa.par("title"))
 }
 
 \arguments{
@@ -34,6 +36,7 @@ boa.plot(type, dev = boa.par("dev"), mfdim = boa.par("plot.mfdim"), newplot = bo
   automatically opened. Otherwise, previous graphics windows will be closed.}
   \item{onelink}{Logical value indicating that each plot should include only 
   one MCMC sequence. Otherwise, all sequences are displayed on the same plot.}
+  \item{title}{Logical value indicating that a title be added to the plot.}
 }
 
 \value{

@@ -1,35 +1,50 @@
 "boa.plot" <-
 function(type, dev = boa.par("dev"), mfdim = boa.par("plot.mfdim"),
                      newplot = boa.par("plot.new"),
-                     onelink = boa.par("plot.onelink"))
+                     onelink = boa.par("plot.onelink"),
+                     title = boa.par("title"))
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 {
    drawn <- FALSE
    switch(type,
-      "acf"     = { foo <- "boa.plot.acf"
+      "acf"     = { text <- "Sampler Lag-Autocorrelations"
+                    foo <- "boa.plot.acf"
                     foo.args <- expression(list(largs[[idx[i]]],
                                                 pargs[[idx[i]]]))
+                    oneparm <- TRUE
                     onelink <- TRUE },
-      "bandg"   = { foo <- "boa.plot.bandg"
+      "bandg"   = { text <- "Brooks & Gelman Multivariate Shrink Factors"
+                    foo <- "boa.plot.bandg"
                     foo.args <- list()
+                    oneparm <- FALSE
                     onelink <- FALSE },
-      "density" = { foo <- "boa.plot.density"
-                    foo.args <- expression(list(largs[[idx[i]]],
-                                                pargs[[idx[i]]])) },
-      "gandr"   = { foo <- "boa.plot.gandr"
-                    foo.args <- expression(list(pargs[[idx[i]]]))
-                    onelink <- FALSE },
-      "geweke"  = { foo <- "boa.plot.geweke"
+      "density" = { text <- "Estimated Posterior Density"
+                    foo <- "boa.plot.density"
                     foo.args <- expression(list(largs[[idx[i]]],
                                                 pargs[[idx[i]]]))
+                    oneparm <- TRUE },
+      "gandr"   = { text <- "Gelman & Rubin Shrink Factors"
+                    foo <- "boa.plot.gandr"
+                    foo.args <- expression(list(pargs[[idx[i]]]))
+                    oneparm <- TRUE
+                    onelink <- FALSE },
+      "geweke"  = { text <- "Geweke Convergence Diagnostic"
+                    foo <- "boa.plot.geweke"
+                    foo.args <- expression(list(largs[[idx[i]]],
+                                                pargs[[idx[i]]]))
+                    oneparm <- TRUE
                     onelink <- TRUE },
-      "history" = { foo <- "boa.plot.history"
+      "history" = { text <- "Sampler Running Mean"
+                    foo <- "boa.plot.history"
                     foo.args <- expression(list(largs[[idx[i]]],
-                                                pargs[[idx[i]]])) },
-      "trace"   = { foo <- "boa.plot.trace"
+                                                pargs[[idx[i]]]))
+                    oneparm <- TRUE },
+      "trace"   = { text <- "Sampler Trace"
+                    foo <- "boa.plot.trace"
                     foo.args <- expression(list(largs[[idx[i]]],
-                                                pargs[[idx[i]]])) },
+                                                pargs[[idx[i]]]))
+                    oneparm <- TRUE },
       { foo <- NULL
         cat("Warning: plot type does not exist\n") }
    )
@@ -40,19 +55,28 @@ function(type, dev = boa.par("dev"), mfdim = boa.par("plot.mfdim"),
       pidx <- NULL
       for(i in lnames) {
          pnames <- boa.pnames(work[[i]])
-         for(j in pnames) {
-            if(onelink) {
-               n <- length(largs)
-               largs[[n + 1]] <- i
-               pargs[[n + 1]] <- j
-               pidx <- c(pidx, paste(j, i))
-            } else if(is.element(j, pidx)) {
-               largs[[j]] <- c(largs[[j]], i)
-            } else {
-               largs[[j]] <- i
-               pargs[[j]] <- j
-               pidx <- c(pidx, j)
+         if(oneparm) {
+            for(j in pnames) {
+                if(onelink) {
+                   n <- length(largs)
+                   largs[[n + 1]] <- i
+                   pargs[[n + 1]] <- j
+                   pidx <- c(pidx, paste(j, i))
+                } else if(is.element(j, pidx)) {
+                   largs[[j]] <- c(largs[[j]], i)
+                } else {
+                   largs[[j]] <- i
+                   pargs[[j]] <- j
+                   pidx <- c(pidx, j)
+                }
             }
+         } else if(length(pidx) > 0) {
+            largs[[2]] <- c(largs[[2]], i)
+            pargs[[2]] <- union(pargs[[2]], pnames)
+         } else {
+            largs[[2]] <- i
+            pargs[[2]] <- pnames
+            pidx <- 2
          }
       }
       largs[[1]] <- pargs[[1]] <- NULL
@@ -80,10 +104,10 @@ function(type, dev = boa.par("dev"), mfdim = boa.par("plot.mfdim"),
                   newdim <- 0
                }
             }
-            boa.plot.par(mfdim)
+            boa.plot.par(mfdim, title)
          }
          drawn <- do.call(foo, args = eval(foo.args)) || drawn
-         boa.plot.title()
+         if(title) boa.plot.title(text)
       }
    }
 

@@ -8,7 +8,8 @@
   extension to the Gelman and Rubin shrink factors.
 }
 \usage{
-boa.plot.bandg(bins = boa.par("gandr.bins"), win = boa.par("gandr.win"))
+boa.plot.bandg(bins = boa.par("gandr.bins"), win = boa.par("gandr.win"),
+legend = boa.par("legend"))
 }
 
 \arguments{
@@ -20,6 +21,7 @@ boa.plot.bandg(bins = boa.par("gandr.bins"), win = boa.par("gandr.win"))
   are used to interpolate through the point estimates for each segment.}
   \item{win}{Proportion of iterations to include in the Brooks, Gelman, and 
   Rubin Statistics.}
+  \item{legend}{Logical value indicating that a legend be included in the plot.}
 }
 
 \value{

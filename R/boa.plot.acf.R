@@ -15,7 +15,6 @@ function(lname, pname, legend = boa.par("legend"))
       if (legend) key(x = usr[2], y = 1, corner = c(1, 1),
                       text = substring(lname, first = 1, last = 16),
                       adj = 1, transparent = TRUE)
-      title("Autocorrelation Plot")
    }
 
    return(drawn)

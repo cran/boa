@@ -1,8 +1,10 @@
 "boa.plot.par" <-
-function(mfdim = c(1, 1))
+function(mfdim = c(1, 1), title = TRUE)
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 {
-   par(mfrow = mfdim, oma = c(0, 0, 3 + max(mfdim), 0))
+   top <- ifelse(title, 3 + mfdim[1], 0)
+   par(mfrow = mfdim, mar = c(5, 4, 2, 2) + 0.1,
+       oma = c(0, 0, top, 0))
    invisible()
 }

@@ -7,7 +7,7 @@
   plots have been added to the target graphics window.
 }
 \usage{
-boa.plot.title(text = boa.par("title"))
+boa.plot.title(text)
 }
 
 \arguments{

@@ -1,6 +1,6 @@
 "boa.plot.bandg" <-
-function(bins = boa.par("gandr.bins"),
-                           win = boa.par("gandr.win"))
+function(bins = boa.par("gandr.bins"), win = boa.par("gandr.win"),
+         legend = boa.par("legend"))
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 {
@@ -25,15 +25,14 @@ function(bins = boa.par("gandr.bins"),
       Rp <- spline(x, Rp[idx])
       Rmax <- spline(x, Rmax[idx])
       ylim <- range(1, Rp$y, Rmax$y)
-      plot(Rmax, xlab = "Last Iteration in Segment", ylab = "Shrink Factor",
+      plot(Rmax, xlab = "Last Iteration in Segment", ylab = "Shrink Factors",
            ylim = ylim, type = "l")
       lines(Rp, lty = 2)
       abline(1, 0, lty = 3)
       usr <- par("usr")
-      key(x = usr[2], y = ylim[2], corner = c(1, 1),
-          text = list(c("Rp", "Rmax")), lines = list(lty = c(2, 1)),
-          transparent = TRUE)
-      title("Brooks & Gelman Multivariate Shrink Factors")
+      if(legend) key(x = usr[2], y = ylim[2], corner = c(1, 1),
+                     text = list(c("Rp", "Rmax")), lines = list(lty = c(2, 1)),
+                     transparent = TRUE)
    }
 
    return(drawn)

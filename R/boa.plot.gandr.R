@@ -1,7 +1,7 @@
 "boa.plot.gandr" <-
 function(pname, bins = boa.par("gandr.bins"),
-                           alpha = boa.par("alpha"),
-                           win = boa.par("gandr.win"))
+         alpha = boa.par("alpha"), win = boa.par("gandr.win"),
+         legend = boa.par("legend"))
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 {
@@ -29,15 +29,14 @@ function(pname, bins = boa.par("gandr.bins"),
       R <- spline(x, R[idx])
       Rq <- spline(x, Rq[idx])
       ylim <- range(1, R$y, Rq$y)
-      plot(R, xlab = "Last Iteration in Segment", ylab = "Shrink Factor",
+      plot(R, xlab = "Last Iteration in Segment", ylab = pname,
            ylim = ylim, type = "l")
       lines(Rq, lty = 2)
       abline(1, 0, lty = 3)
       usr <- par("usr")
-      key(x = usr[2], y = ylim[2], corner = c(1, 1),
-          text = list(c(pname, 1 - alpha / 2, "Median")),
-          lines = list(lty = 3:1), type = c("n", "l", "l"), transparent = TRUE)
-      title("Gelman & Rubin Shrink Factors")
+      if(legend) key(x = usr[2], y = ylim[2], corner = c(1, 1),
+                     text = list(c(paste(100 * (1 - alpha / 2), "%", sep=""), "Median")),
+                     lines = list(lty = 2:1), transparent = TRUE)
    }
 
    return(drawn)

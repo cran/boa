@@ -7,7 +7,8 @@
   specified parameter(s).
 }
 \usage{
-boa.plot.density(lnames, pname, bandwidth = boa.par("bandwidth"), window = boa.par("kernel"), legend = boa.par("legend"))
+boa.plot.density(lnames, pname, bandwidth = boa.par("bandwidth"),
+window = boa.par("kernel"), legend = boa.par("legend"))
 }
 
 \arguments{
