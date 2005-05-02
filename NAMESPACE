@@ -35,6 +35,7 @@ export(
    boa.print.acf,
    boa.print.cor,
    boa.print.gandr,
+   boa.print.geweke,
    boa.print.handw,
    boa.print.hpd,
    boa.print.info,
