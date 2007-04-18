@@ -8,7 +8,15 @@
   with the appropriate default values.
 }
 \usage{
-boa.init()
+boa.init(recover = FALSE)
+}
+
+\arguments{
+  \item{recover}{
+  a logical value for use if the previous BOA menu session
+  terminated unexpectedly.  It may be possible to crash the menu system by
+  supplying the wrong type of data.  In the event of a crash, \code{recover = TRUE}
+  may be used to ensure that no data is lost.}
 }
 
 \author{Brian J. Smith}

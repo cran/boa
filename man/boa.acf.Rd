@@ -25,4 +25,4 @@ boa.acf(link, lags)
 \seealso{ \code{\link{boa.plot}}, \code{\link{boa.plot.acf}},
   \code{\link{boa.print.acf}} }
 
-\keyword{internal}
+\keyword{univar}

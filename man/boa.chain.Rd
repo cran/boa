@@ -62,4 +62,4 @@ by the names in the arguments are modified.
 
 \author{Brian J. Smith}
 
-\keyword{internal}
+\keyword{utilities}

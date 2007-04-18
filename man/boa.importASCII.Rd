@@ -34,4 +34,4 @@ returned matrix. Otherwise, NULL is returned.
 \seealso{ \code{\link{boa.chain.import}}, \code{\link{boa.importBUGS}},
    \code{\link{boa.importMatrix}} }
 
-\keyword{internal}
+\keyword{utilities}

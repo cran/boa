@@ -22,4 +22,4 @@ boa.version()
 
 \seealso{ \code{\link{boa.license}} }
 
-\keyword{utilities}
+\keyword{internal}

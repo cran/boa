@@ -17,4 +17,4 @@ boa.plot.open()
 
 \seealso{ \code{\link{boa.plot.close}} }
 
-\keyword{utilities}
+\keyword{internal}

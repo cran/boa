@@ -8,7 +8,6 @@ function()
                 "---------------------------+",
                 "Descriptive Statistics  >> |",
                 "Convergence Diagnostics >> |",
-                "Options...                 |",
                 "---------------------------+")
    idx <- 1
    while(idx > 0) {
@@ -18,8 +17,7 @@ function()
          "2" = NULL,
          "3" = idx <- boa.menu.stats(),
          "4" = idx <- boa.menu.coda(),
-         "5" = boa.menu.setpar("Analysis"),
-         "6" = NULL
+         "5" = NULL
       )
    }
 

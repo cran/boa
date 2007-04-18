@@ -55,4 +55,4 @@ boa.chain.gandr(chain, chain.support, alpha, pnames, window, to)
 \seealso{ \code{\link{boa.plot}}, \code{\link{boa.plot.bandg}},
   \code{\link{boa.plot.gandr}}, \code{\link{boa.print.gandr}} }
 
-\keyword{internal}
+\keyword{univar}

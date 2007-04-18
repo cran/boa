@@ -25,4 +25,4 @@ credible and HPD intervals. Journal of Computational and Graphical Statistics,
 8(1), 69-92.}
 \author{Brian J. Smith}
 
-\keyword{internal}
+\keyword{univar}

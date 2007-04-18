@@ -13,7 +13,7 @@ function(group)
    cat("\n")
    idx <- ""
    while((length(idx) > 0) && !is.element(idx, seq(par.names))) {
-      cat("Select parameter to change or press <ENTER> to continue\n")
+      cat("Specify parameter to change or press <ENTER> to continue\n")
       idx <- scan(what = "", n = 1, strip.white = TRUE)
    }
    if(length(idx) > 0) {

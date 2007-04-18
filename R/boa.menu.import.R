@@ -7,8 +7,8 @@ function()
    choices <- c("Back",
                 "---------------------------+",
                 "CODA Output Files          |",
-                "Flat ASCII File            |",
-                "Data Matrix Object         |",
+                "Flat ASCII Files           |",
+                "Data Matrix Objects        |",
                 "View Format Specifications |",
                 "Options...                 |",
                 "---------------------------+")
@@ -18,10 +18,13 @@ function()
       switch(idx,
          "1" = idx <- -1,
          "2" = NULL,
-         "3" = { cat("\nEnter filename prefix without the .ind or .out ",
+         "3" = { cat("\nEnter index filename prefix without the .ind ",
                      "extension [Working Directory: ",
                      deparse(boa.par("path")), "]\n", sep = "")
                  value <- scan(what = "", n = 1, strip.white = TRUE)
+                 cat("\nEnter output filename prefix without the .out ",
+                     "extension [Default: \"", value, "\"]\n", sep = "")
+                 value <- c(value, scan(what = "", n = 1, strip.white = TRUE))
                  if(boa.chain.import(value, type = "BUGS"))
                     cat("+++ Data successfully imported +++\n")
                },
@@ -63,10 +66,11 @@ function()
                  cat("\nPress <ENTER> to continue")
                  readline()
                },
-         "7" = boa.menu.setpar("Data"),
+         "7" = boa.menu.setpar("Import"),
          "8" = NULL
       )
    }
 
    return(abs(idx))
 }
+

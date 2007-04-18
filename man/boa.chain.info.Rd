@@ -34,4 +34,4 @@ boa.chain.info(chain, chain.support)
 
 \seealso{ \code{\link{boa.print.info}} }
 
-\keyword{internal}
+\keyword{utilities}

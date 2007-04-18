@@ -5,11 +5,11 @@ function()
 {
    mtitle <- "\nCHAINS MENU\n-----------"
    choices <- c("Back",
-                "------------+",
-                "Combine All |",
-                "Delete      |",
-                "Subset      |",
-                "------------+")
+                "----------+",
+                "Merge All |",
+                "Delete    |",
+                "Subset    |",
+                "----------+")
    idx <- 1
    while(idx > 0) {
       idx <- menu(choices, title = mtitle)

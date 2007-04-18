@@ -31,4 +31,4 @@ respectively.
 
 \seealso{ \code{\link{boa.print.stats}} }
 
-\keyword{internal}
+\keyword{univar}

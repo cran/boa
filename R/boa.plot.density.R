@@ -35,7 +35,6 @@ function(lnames, pname, bandwidth = boa.par("bandwidth"),
             k <- k + 1
             lines(xydensity[[k]], lty = k)
             parm <- work[[i]][, j]
-            points(parm, rep(0, length(parm)), pch = k)
          }
       }
       if(annotate)

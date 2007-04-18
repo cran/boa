@@ -5,14 +5,18 @@ function(which = "work")
 {
    switch(which,
       "work" = { chain <- boa.chain("work")
-                 chain.support <- boa.chain("work.support") },
+                 chain.support <- boa.chain("work.support")
+                 cat("\n",
+                     "WORKING CHAIN SUMMARY:\n",
+                     "======================\n\n", sep = "") },
       "master" = { chain <- boa.chain("master")
-                 chain.support <- boa.chain("master.support") },
+                 chain.support <- boa.chain("master.support")
+                 cat("\n",
+                     "MASTER CHAIN SUMMARY:\n",
+                     "=====================\n\n", sep = "") },
       chain <- NULL
    )
-   cat("\n",
-       "CHAIN SUMMARY INFORMATION:\n",
-       "==========================\n\n", sep = "")
+
    chain.info <- boa.chain.info(chain, chain.support)
    if(is.list(chain.info)) {
       cat("Iterations:\n",

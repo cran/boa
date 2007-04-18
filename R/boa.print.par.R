@@ -3,14 +3,11 @@ function(group)
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 {
-   pardesc <- NULL
-   if(missing(group)) {
-      pardesc <- boa.pardesc()
-   } else if(is.element(group, c("Analysis", "Data", "Plot"))) {
-      pardesc <- boa.pardesc()
-      pardesc <- pardesc[pardesc[, "group"] == group, ]
-   }
-   if(is.matrix(pardesc)) {
+   value <- boa.pardesc()
+   if(missing(group)) pardesc <- value
+   else pardesc <- value[value[, "group"] %in% group, ]
+
+   if(nrow(pardesc) > 0) {
       globals <- boa.par()[pardesc[, "par"]]
       heading1 <- heading2 <- ""
       mar1 <- nchar(seq(globals))

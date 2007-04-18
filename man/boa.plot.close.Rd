@@ -22,4 +22,4 @@ boa.plot.close(which = dev.cur())
 
 \seealso{ \code{\link{boa.plot.open}} }
 
-\keyword{utilities}
+\keyword{internal}

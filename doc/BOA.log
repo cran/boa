@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.141592-1.20b-2.2 (MiKTeX 2.4) (preloaded format=latex 2005.1.7)  8 JAN 2005 18:47
+This is pdfeTeX, Version 3.141592-1.20b-2.2 (MiKTeX 2.4) (preloaded format=latex 2005.1.7)  22 MAY 2005 16:08
 entering extended mode
 **BOA.tex
 (BOA.tex
@@ -199,10 +199,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1019 strings out of 95517
- 11461 string characters out of 1188962
- 60834 words of memory out of 1060514
- 4113 multiletter control sequences out of 60000
+ 1020 strings out of 95517
+ 11464 string characters out of 1188962
+ 60837 words of memory out of 1060517
+ 4114 multiletter control sequences out of 60000
  10397 words of font info for 37 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 607
  25i,6n,19p,220b,289s stack positions out of 1500i,500n,5000p,200000b,32768s
@@ -218,4 +218,4 @@ pfb><C:\Program Files\MikTex\Main\fonts\type1\bluesky\cm\cmtt10.pfb><C:\Program
  Files\MikTex\Main\fonts\type1\bluesky\cm\cmbx12.pfb><C:\Program Files\MikTex\M
 ain\fonts\type1\bluesky\cm\cmr12.pfb><C:\Program Files\MikTex\Main\fonts\type1\
 bluesky\cm\cmr17.pfb>
-Output written on BOA.pdf (44 pages, 348668 bytes).
+Output written on BOA.pdf (44 pages, 348902 bytes).

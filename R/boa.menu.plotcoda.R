@@ -10,6 +10,7 @@ function()
                 "Brooks & Gelman |",
                 "Gelman & Rubin  |",
                 "Geweke          |",
+                "Options...      |",
                 "----------------+")
    idx <- 1
    while(idx > 0) {
@@ -20,7 +21,8 @@ function()
          "3" = boa.plot("bandg"),
          "4" = boa.plot("gandr"),
          "5" = boa.plot("geweke"),
-         "6" = NULL
+         "6" = boa.menu.setpar(c("Convergence Plot", "Plot")),
+         "7" = NULL
       )
    }
 

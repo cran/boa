@@ -6,8 +6,8 @@ function(alpha = boa.par("alpha"),
 {    work <- boa.chain("work")
    work.support <- boa.chain("work.support")
    cat("\n",
-       "BROOKS, GELMAN AND RUBIN CONVERGENCE DIAGNOSTICS:\n",
-       "=================================================\n\n", sep = "")
+       "BROOKS, GELMAN, AND RUBIN CONVERGENCE DIAGNOSTICS:\n",
+       "==================================================\n\n", sep = "")
    gandr <- boa.chain.gandr(work, work.support, alpha, window = win)
    cat("Iterations used = ", paste(gandr$window, collapse=":"), "\n\n",
        sep = "")

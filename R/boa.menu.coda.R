@@ -5,12 +5,13 @@ function()
 {
    mtitle <- "\nCONVERGENCE DIAGNOSTICS MENU\n----------------------------"
    choices <- c("Back",
-                "-----------------------+",
-                "Brooks, Gelman & Rubin |",
-                "Geweke                 |",
-                "Heidelberger & Welch   |",
-                "Raftery & Lewis        |",
-                "-----------------------+")
+                "------------------------+",
+                "Brooks, Gelman, & Rubin |",
+                "Geweke                  |",
+                "Heidelberger & Welch    |",
+                "Raftery & Lewis         |",
+                "Options...              |",
+                "------------------------+")
    idx <- 1
    while(idx > 0) {
       idx <- menu(choices, title = mtitle)
@@ -21,7 +22,8 @@ function()
          "4" = boa.print.geweke(),
          "5" = boa.print.handw(),
          "6" = boa.print.randl(),
-         "7" = NULL
+         "7" = boa.menu.setpar("Convergence"),
+         "6" = NULL
       )
    }
 

@@ -8,7 +8,6 @@ function()
                 "---------------------------+",
                 "Descriptive             >> |",
                 "Convergence Diagnostics >> |",
-                "Options...                 |",
                 "---------------------------+")
    idx <- 1
    while(idx > 0) {
@@ -18,8 +17,7 @@ function()
          "2" = NULL,
          "3" = idx <- boa.menu.plotdesc(),
          "4" = idx <- boa.menu.plotcoda(),
-         "5" = boa.menu.setpar("Plot"),
-         "6" = NULL
+         "5" = NULL
       )
    }
 

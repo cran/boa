@@ -38,4 +38,4 @@ parameters, respectively.
 
 \seealso{ \code{\link{boa.print.randl}} }
 
-\keyword{internal}
+\keyword{univar}

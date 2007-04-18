@@ -32,4 +32,4 @@ in the presence of an initial transient. Operations Research, 31, 1109-44.}
 
 \seealso{ \code{\link{boa.print.handw}} }
 
-\keyword{internal}
+\keyword{univar}

@@ -29,4 +29,4 @@ returned matrix. Otherwise, NULL is returned.
 \seealso{ \code{\link{boa.chain.import}}, \code{\link{boa.importASCII}},
    \code{\link{boa.importBUGS}} }
 
-\keyword{internal}
+\keyword{utilities}

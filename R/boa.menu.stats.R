@@ -10,6 +10,7 @@ function()
                 "Correlation Matrix                     |",
                 "Highest Probability Density Intervals  |",
                 "Summary Statistics                     |",
+                "Options...                             |",
                 "---------------------------------------+")
    idx <- 1
    while(idx > 0) {
@@ -21,7 +22,8 @@ function()
          "4" = boa.print.cor(),
          "5" = boa.print.hpd(),
          "6" = boa.print.stats(),
-         "7" = NULL
+         "7" = boa.menu.setpar("Descriptive"),
+         "8" = NULL
       )
    }
 

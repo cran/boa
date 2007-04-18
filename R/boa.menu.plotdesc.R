@@ -10,6 +10,7 @@ function()
                 "Density          |",
                 "Running Mean     |",
                 "Trace            |",
+                "Options...       |",
                 "-----------------+")
    idx <- 1
    while(idx > 0) {
@@ -21,7 +22,8 @@ function()
          "4" = boa.plot("density"),
          "5" = boa.plot("history"),
          "6" = boa.plot("trace"),
-         "7" = NULL
+         "7" = boa.menu.setpar(c("Descriptive Plot", "Plot")),
+         "8" = NULL
       )
    }
 

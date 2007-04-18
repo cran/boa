@@ -33,4 +33,4 @@ Oxford, UK.}
 \seealso{ \code{\link{boa.plot}}, \code{\link{boa.plot.geweke}},
   \code{\link{boa.print.geweke}} }
 
-\keyword{internal}
+\keyword{univar}

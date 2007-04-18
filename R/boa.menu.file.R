@@ -7,8 +7,8 @@ function()
    choices <- c("Back",
                 "-----------------------+",
                 "Import Data         >> |",
-                "Load Session           |",
                 "Save Session           |",
+                "Load Session           |",
                 "Exit BOA               |",
                 "-----------------------+")
    idx <- 1
@@ -18,12 +18,7 @@ function()
          "1" = idx <- -1,
          "2" = NULL,
          "3" = idx <- boa.menu.import(),
-         "4" = { cat("\nEnter name of object to load [none]\n")
-                 value <- scan(what = "", n = 1, strip.white = TRUE)
-                 if(length(value) && boa.load(value))
-                    cat("+++ Data successfully loaded +++\n")
-               },
-         "5" = { saveas <- "y"
+         "4" = { saveas <- "y"
                  cat("\nEnter name of object to which to save the session",
                      "data [none]\n")
                  value <- scan(what = "", n = 1, strip.white = TRUE)
@@ -36,6 +31,11 @@ function()
                        && boa.save(value))
                        cat("+++ Data successfully saved +++\n")
                  }
+               },
+         "5" = { cat("\nEnter name of object to load [none]\n")
+                 value <- scan(what = "", n = 1, strip.white = TRUE)
+                 if(length(value) && boa.load(value))
+                    cat("+++ Data successfully loaded +++\n")
                },
          "6" = { cat("\nDo you really want to EXIT (y/n) [n]?\n")
                  value <- scan(what = "", n = 1, strip.white = TRUE)
