@@ -19,17 +19,23 @@ function(lname, pname, bins = boa.par("geweke.bins"),
       }
       if(any(is.finite(y))) {
          drawn <- TRUE
+         val <- boa.par("par")
+         cex <- ifelse(is.null(val$cex), 1, val$cex)
+         lwd <- ifelse(is.null(val$lwd), 1, val$lwd)
          q.upper <- qnorm(1 - alpha / 2)
          ylim <- range(y, -q.upper, q.upper, na.rm = TRUE)
          plot(x, y, xlab = "First Iteration in Segment", ylab = "Z-Score",
-              main = pname, xlim=c(riter[1], max(x[!is.na(y)])), ylim = ylim)
-         abline(q.upper, 0, lty = 2)
-         abline(0, 0)
-         abline(-q.upper, 0, lty = 2)
+              main = pname, xlim=c(riter[1], max(x[!is.na(y)])), ylim = ylim,
+              cex = cex)
+         abline(q.upper, 0, lty = 2, lwd = lwd)
+         abline(0, 0, lwd = lwd)
+         abline(-q.upper, 0, lty = 2, lwd = lwd)
          usr <- par("usr")
-         if(annotate)
+         if(annotate) {
             legend(x = usr[2], y = ylim[2], xjust = 1, yjust = 1,
-                   legend = substring(lname, first = 1, last = 16), bty = "n")
+                   legend = substring(lname, first = 1, last = 16), bty = "n",
+                   cex = cex)
+         }
       }
    }
 

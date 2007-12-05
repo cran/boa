@@ -1,0 +1,28 @@
+boa.chain.collapse            package:boa            R Documentation
+
+_C_o_n_c_a_t_e_n_a_t_e _M_C_M_C _S_e_q_u_e_n_c_e_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Concatenates together all of the MCMC sequences in the working
+     session list of sequences. Only those parameters common to all
+     sequences are kept.
+
+_U_s_a_g_e:
+
+     boa.chain.collapse()
+
+_V_a_l_u_e:
+
+     A logical value indicating that the MCMC sequences have been
+     collapsed. If the sequences share no common parameters, no
+     modifications are made to the working list and FALSE is returned.
+
+_A_u_t_h_o_r(_s):
+
+     Brian J. Smith
+
+_S_e_e _A_l_s_o:
+
+     code{boa.chain.reset}, code{boa.chain.subset}
+

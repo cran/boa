@@ -1,0 +1,37 @@
+\HeaderA{boa.plot.bandg}{Plot Brooks and Gelman Multivariate Shrink Factors}{boa.plot.bandg}
+\keyword{hplot}{boa.plot.bandg}
+\begin{Description}\relax
+Plots the Brooks and Gelman multivariate shrink factors within different line 
+segments across the MCMC sequences. This diagnostic is a multivariate 
+extension to the Gelman and Rubin shrink factors.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+boa.plot.bandg(bins = boa.par("gandr.bins"), win = boa.par("gandr.win"),
+annotate = boa.par("legend"))
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{bins}] Number of line segments within the MCMC sequence at which to plot 
+the Gelman and Rubin shrink factors. The first segment contains the first 50 
+iterations; the remaining iterations are partitioned into equal bins and added 
+incrementally to construct the remaining line segments. The shrink factors are 
+plotted against the maximum iteration number for the segment. Cubic splines 
+are used to interpolate through the point estimates for each segment.
+\item[\code{win}] Proportion of iterations to include in the Brooks, Gelman, and 
+Rubin Statistics.
+\item[\code{annotate}] Logical value indicating that a legend be included in the plot.
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+A logical value indicating that the plot was successfully created.
+\end{Value}
+\begin{Author}\relax
+Brian J. Smith
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{boa.chain.gandr}{boa.chain.gandr}}, \code{\LinkA{boa.plot}{boa.plot}},
+\code{\LinkA{boa.plot.gandr}{boa.plot.gandr}}, \code{\LinkA{boa.print.gandr}{boa.print.gandr}}
+\end{SeeAlso}
+

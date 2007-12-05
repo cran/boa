@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Heidelberger and Welch Convergence Diagnostics</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for boa.handw {boa}"><tr><td>boa.handw {boa}</td><td align="right">R Documentation</td></tr></table>
+<h2>Heidelberger and Welch Convergence Diagnostics</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Computes the Heidleberger and Welch convergence diagnostics for the
+parameters in an MCMC sequence.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+boa.handw(link, error, alpha)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>link</code></td>
+<td>
+Matrix whose columns and rows contain the monitored parameters
+and the MCMC iterations, respectively. The iteration numbers and parameter
+names must be assigned to <code>dimnames(link)</code>.</td></tr>
+<tr valign="top"><td><code>error</code></td>
+<td>
+Accuracy of the posterior estimates for the parameters.</td></tr>
+<tr valign="top"><td><code>alpha</code></td>
+<td>
+Alpha level for the confidence in the sample mean of the
+retained iterations.</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<p>
+A matrix whose columns and rows are the Heidleberger and Welch convergence
+diagnostics (i.e. stationarity test, number of iterations to keep and to drop,
+Cramer-von-Mises statistic, halfwidth test, mean, and halfwidth) and the
+monitored parameters, respectively.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Brian J. Smith, Nicky Best, Kate Cowles
+</p>
+
+
+<h3>References</h3>
+
+<p>
+Heidelberger, P. and Welch, P. (1983). Simulation run length control
+in the presence of an initial transient. Operations Research, 31, 1109-44.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../../doc/html/search/SearchObject.html?boa.print.handw">boa.print.handw</a></code>
+</p>
+
+
+
+<hr><div align="center">[Package <em>boa</em> <a href="00Index.html">Index]</a></div>
+
+</body></html>

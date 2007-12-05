@@ -1,0 +1,31 @@
+boa.chain.del              package:boa              R Documentation
+
+_D_e_l_e_t_e _M_C_M_C _S_e_q_u_e_n_c_e_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Delete MCMC sequences from the session list of sequences.
+
+_U_s_a_g_e:
+
+     boa.chain.del(lnames, pnames)
+
+_A_r_g_u_m_e_n_t_s:
+
+  lnames: Character vector giving the names of the MCMC sequences in
+          the session list of sequences to be deleted. If omitted, no
+          sequences are deleted.
+
+  pnames: Character vector giving the names of the parameters in the
+          MCMC sequences to be deleted. If omitted, no parameters are
+          deleted.
+
+_S_i_d_e _E_f_f_e_c_t_s:
+
+     The specified MCMC sequences are deleted from the session lists of
+     sequences.
+
+_A_u_t_h_o_r(_s):
+
+     Brian J. Smith
+

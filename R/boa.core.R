@@ -60,6 +60,7 @@ boa.init <- function(recover = FALSE)
                   kernel       = "gaussian",
                   legend       = TRUE,
                   path         = "",
+                  par          = list(),
                   plot.mfdim   = c(3, 2),
                   plot.new     = FALSE,
                   plot.onelink = FALSE,
@@ -111,7 +112,8 @@ boa.init <- function(recover = FALSE)
                c("Plot", "Graphics", "Plot Layout", "plot.mfdim",
                   paste("A vector of the form \'c(nr, nc)\' giving the number of\n",
                         "rows and columns to include in each plot", sep="")),
-               c("Plot", "Graphics", "Plot Chains Separately", "plot.onelink", "")),
+               c("Plot", "Graphics", "Plot Chains Separately", "plot.onelink", ""),
+               c("Plot", "Graphics", "Graphical Parameters", "par", "")),
                dimnames =
                   list(NULL, c("group", "method", "desc", "par", "note"))),
             envir = globalenv())
@@ -125,7 +127,7 @@ boa.init <- function(recover = FALSE)
             list(name     = "BOA",
                   major    = 1,
                   minor    = 1,
-                  revision = 6,
+                  revision = 7,
                   system   = version$system), envir = globalenv())
       boa.license()
    }

@@ -1,0 +1,42 @@
+boa.chain.support            package:boa            R Documentation
+
+_S_e_t _S_u_p_p_o_r_t _f_o_r _P_a_r_a_m_e_t_e_r_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Modifies the support (range of possible values) for the parameters
+     in the session lists of MCMC sequences.
+
+_U_s_a_g_e:
+
+     boa.chain.support(lnames, pnames, limits)
+
+_A_r_g_u_m_e_n_t_s:
+
+  lnames: Character vector giving the names of the MCMC sequences over
+          which to apply the changes. If omitted, changes are applied
+          to all sequences.
+
+  pnames: Character vector giving the names of the parameters whose
+          support is to be modified.
+
+  limits: Numeric vector with two elements giving the lower and upper
+          limits, respectively, of the support for the specified
+          parameters. Unbounded lower or upper limits should be
+          specified as -Inf or Inf, respectively.
+
+_V_a_l_u_e:
+
+     A logical vector with two elements indicating that the support has
+     been changed for variables in the master list and working list of
+     MCMC sequences, respectively.
+
+_S_i_d_e _E_f_f_e_c_t_s:
+
+     The support for each of the specified parameters is changed in the
+     session lists of MCMC sequences.
+
+_A_u_t_h_o_r(_s):
+
+     Brian J. Smith
+

@@ -1,0 +1,23 @@
+boa.plot.title              package:boa              R Documentation
+
+_A_d_d _P_l_o_t _T_i_t_l_e
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Adds a title to the graphics window. This function should be
+     called after all  plots have been added to the target graphics
+     window.
+
+_U_s_a_g_e:
+
+     boa.plot.title(text)
+
+_A_r_g_u_m_e_n_t_s:
+
+    text: Character string giving the title to be centered and
+          displayed  across the top of the graphics window.
+
+_A_u_t_h_o_r(_s):
+
+     Brian J. Smith
+

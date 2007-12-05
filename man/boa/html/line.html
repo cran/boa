@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: BUGS Line Example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for line {boa}"><tr><td>line {boa}</td><td align="right">R Documentation</td></tr></table>
+<h2>BUGS Line Example</h2>
+
+
+<h3>Description</h3>
+
+<p>
+The Line example involves a linear regression analysis of the data points (1,1),
+(2,3), (3,3), (4,3), and (5,5).  The proposed Bayesian model is
+</p><p align="center"><i>y[i] ~ N(mu[i], tau)</i></p><p align="center"><i>mu[i] = alpha + beta * (x[i] - mean(x[]))</i></p><p>
+with the following priors:
+</p><p align="center"><i>alpha ~ N(0, 0.0001)</i></p><p align="center"><i>beta ~ N(0, 0.0001)</i></p><p align="center"><i>tau ~ Gamma(0.001, 0.001)</i></p><p>
+Two parallel chains from the MCMC sampler were generated and the output saved in the 
+S data frames line1 and line2.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(line)</pre>
+
+
+<h3>Format</h3>
+
+<p>
+The data frames line1 and line2 each containing 200 observations.
+</p>
+
+
+<h3>References</h3>
+
+<p>
+Spiegelhalter, D., Thomas, A. and Best, N., (2000). WinBugs Version 1.4 User
+Manual.
+</p>
+
+
+
+<hr><div align="center">[Package <em>boa</em> <a href="00Index.html">Index]</a></div>
+
+</body></html>

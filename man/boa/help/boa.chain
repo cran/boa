@@ -1,0 +1,77 @@
+boa.chain                package:boa                R Documentation
+
+_S_e_s_s_i_o_n _L_i_s_t_s _o_f _M_C_M_C _S_e_q_u_e_n_c_e_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Extracts and sets the MCMC sequence(s) stored internally for use
+     during a BOA session. Users can safely use this function to
+     extract data. However, it should not be called directly to modify
+     the stored MCMC sequence(s). Instead, data management should
+     accomplished with the libboa.chain functions.
+
+_U_s_a_g_e:
+
+     boa.chain(...)
+
+_A_r_g_u_m_e_n_t_s:
+
+     ...: A list may be given as the only argument, or a character
+          string given as the only argument, or any number of arguments
+          may be in the '<name> = <value>' form, or no argument at all
+          may be given. See the Value and Side Effects sections for
+          further details.
+
+_V_a_l_u_e:
+
+     If no arguments are supplied, a list of the current values is
+     returned. If a character string is given, the current value of the
+     named variable is returned. Otherwise, no values are returned.
+
+_P_a_r_a_m_e_t_e_r _N_a_m_e_s _a_n_d _D_e_f_a_u_l_t _V_a_l_u_e_s:
+
+     _m_a_s_t_e_r = _l_i_s_t() Master list containing all added MCMC sequences.
+          Sequences may only be added to or deleted from the master
+          list. The sequences in this list are never modified or used
+          in any of the analyses. It serves as a template for the
+          working list described below. The parameters and iterations
+          may differ between the sequences. Each element in the list is
+          a matrix whose columns and rows contain the monitored
+          parameters and the MCMC iterations, respectively. The
+          iteration numbers and parameter names are stored in the
+          dimnames.
+
+     _m_a_s_t_e_r._s_u_p_p_o_r_t = _l_i_s_t() List containing the support for each of
+          the parameters in 'master'. Each element in the list is a
+          matrix whose columns and rows contain the monitored
+          parameters and the support (lower and upper limits),
+          respectively. The default for each parameter is c(-Inf, Inf).
+
+     _w_o_r_k = _m_a_s_t_e_r Working list used in all analyses. This list is
+          essentially a modifiable copy of 'master'. All data
+          management functions operate on the working list.
+
+     _w_o_r_k._s_u_p_p_o_r_t = _m_a_s_t_e_r._s_u_p_p_o_r_t List containing the support for each
+          of the parameters in 'work'.
+
+     _w_o_r_k._s_y_n_c = _T_R_U_E Logical value indicating that the working list is
+          an identical copy of the master list. This variable is
+          automatically set to F after a successful call to
+          'boa.chain.subset' or  'boa.chain.collapse'. While 'work.sync
+          = F', only the master list will be updated if MCMC sequences
+          are added or deleted. A call to 'boa.chain.reset' will reset
+          this variable to T and copy the master list to the working
+          list.
+
+_S_i_d_e _E_f_f_e_c_t_s:
+
+     When variables are set, boa.chain() modifies the internal list
+     '.boa.chain'. If boa.chain() is called with either a list as the
+     single argument, or with one or more arguments in the '<name> =
+     <value>' form, the variables specified by the names in the
+     arguments are modified.
+
+_A_u_t_h_o_r(_s):
+
+     Brian J. Smith
+

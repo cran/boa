@@ -27,19 +27,23 @@ function(lnames, pname, bandwidth = boa.par("bandwidth"),
    }
    drawn <- k > 0
    if(drawn) {
+      val <- boa.par("par")
+      cex <- ifelse(is.null(val$cex), 1, val$cex)
+      lwd <- ifelse(is.null(val$lwd), 1, val$lwd)
       plot(xlim, ylim, xlab = pname, ylab = "Density", xlim = xlim,
            ylim = ylim, type = "n")
       k <- 0
       for(i in lnames) {
          for(j in ipname[[i]]) {
             k <- k + 1
-            lines(xydensity[[k]], lty = k)
+            lines(xydensity[[k]], lty = k, lwd = lwd)
             parm <- work[[i]][, j]
          }
       }
       if(annotate)
          legend(x = xlim[2], y = ylim[2], xjust = 1, yjust = 1,
-                legend = key.names, lty = 1:k, bty = "n")
+                legend = key.names, lty = 1:k, bty = "n",
+                cex = cex, lwd = lwd)
    }
 
    return(drawn)

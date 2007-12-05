@@ -1,0 +1,29 @@
+\HeaderA{boa.getiter}{Extract Iterations}{boa.getiter}
+\keyword{internal}{boa.getiter}
+\begin{Description}\relax
+Extracts a subset of the iterations in an MCMC sequence.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+boa.getiter(link, iter)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{link}] Matrix whose columns and rows contain the monitored parameters
+and the MCMC iterations, respectively. The iteration numbers and parameter
+names must be assigned to \code{dimnames(link)}.
+\item[\code{iter}] Numeric vector containing the iterations to extract from 'link'.
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+A subset of 'link' containing all prior parameters and the iterations specified
+in 'iter'.
+\end{Value}
+\begin{Author}\relax
+Brian J. Smith
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{boa.iter}{boa.iter}}, \code{\LinkA{boa.getparms}{boa.getparms}}
+\end{SeeAlso}
+

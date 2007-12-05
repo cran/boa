@@ -1,0 +1,56 @@
+boa.randl                package:boa                R Documentation
+
+_R_a_f_t_e_r_y _a_n_d _L_e_w_i_s _C_o_n_v_e_r_g_e_n_c_e _D_i_a_g_n_o_s_t_i_c_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Computes the Raftery and Lewis convergence diagnostics for the
+     parameters in  an MCMC sequence.
+
+_U_s_a_g_e:
+
+     boa.randl(link, q, error, prob, delta)
+
+_A_r_g_u_m_e_n_t_s:
+
+    link: Matrix whose columns and rows contain the monitored
+          parameters  and the MCMC iterations, respectively. The
+          iteration numbers and parameter  names must be assigned to
+          'dimnames(link)'.
+
+       q: Quantile to be estimated.
+
+   error: Desired amount of error in estimating the specified quantile
+          'q'.
+
+    prob: Probability of attaining the desired degree of error -
+          'error'.
+
+   delta: Delta value used in computing the convergence diagnostics.
+
+_V_a_l_u_e:
+
+     A matrix whose columns and rows are the Raftery and Lewis
+     convergence diagnostics  (i.e. thin, burn-in, total, lower bound,
+     and dependence factor) and the monitored  parameters,
+     respectively.
+
+_A_u_t_h_o_r(_s):
+
+     Brian J. Smith, Nicky Best, Kate Cowles
+
+_R_e_f_e_r_e_n_c_e_s:
+
+        1.  Raftery, A. L. and Lewis, S. (1992a). Comment: One long run
+           with diagnostics:  Implementation strategies for Markov
+           chain Monte Carlo. Statistical Science, 7, 493-7.
+
+        2.  Raftery, A. L. and Lewis, S. (1992b). How many iterations
+           in the Gibbs sampler?  In Bayesian Statistics 4, (ed. J. M.
+           Bernardo, J. O. Berger, A. P. Dawid, and A. F. M.  Smith),
+           pp. 763-74. Oxford University Press.
+
+_S_e_e _A_l_s_o:
+
+     'boa.print.randl'
+

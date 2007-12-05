@@ -1,0 +1,32 @@
+\HeaderA{boa.menu}{Interactive BOA Menu}{boa.menu}
+\keyword{interface}{boa.menu}
+\begin{Description}\relax
+Starts the interactive menu for BOA.  Provides a menu-driven interface to
+all of the convergence diagnostics and statistical and graphical analysis
+tools.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+boa.menu(recover = FALSE)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{recover}] a logical value for use if the previous BOA menu session
+terminated unexpectedly.  It may be possible to crash the menu system by
+supplying the wrong type of data.  In the event of a crash, \code{recover = TRUE}
+may be used to ensure that no data is lost.
+\end{ldescription}
+\end{Arguments}
+\begin{Section}{Warning}
+Do not use the \code{recover} argument unless starting the menu
+immediately after a crash.
+\end{Section}
+\begin{Note}\relax
+\code{boa.menu} is the only function in the BOA library that need be called in
+order to use the menu-driven interface.
+\end{Note}
+\begin{Author}\relax
+Brian J. Smith
+\end{Author}
+

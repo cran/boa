@@ -1,0 +1,26 @@
+\HeaderA{boa.print.handw}{Print Heidelberger and Welch Convergence Diagnostics}{boa.print.handw}
+\keyword{print}{boa.print.handw}
+\begin{Description}\relax
+Iteratively calls boa.handw() to display the Heidelberger and Welch 
+convergence diagnostics for the parameters in each of the MCMC sequences 
+in the working session list of sequences.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+boa.print.handw(error = boa.par("handw.error"), alpha = boa.par("alpha"))
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{error}] Accuracy of the posterior estimates for the monitored parameters.
+\item[\code{alpha}] Alpha level for the confidence in the sample mean of the retained 
+iterations.
+\end{ldescription}
+\end{Arguments}
+\begin{Author}\relax
+Brian J. Smith
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{boa.handw}{boa.handw}}
+\end{SeeAlso}
+

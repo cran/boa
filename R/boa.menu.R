@@ -10,8 +10,9 @@ function(recover = FALSE)
           sep = "")
 
    mtitle <- "\nBOA MAIN MENU\n*************"
-   choices <- c("File     >>", "Data     >>", "Analysis >>", "Plot     >>",
-                "Options  >>", "Window   >>")
+   choices <- c("File            >>", "Data Management >>",
+                "Analysis        >>", "Plot            >>",
+                "Options         >>", "Window          >>")
    idx <- 1
    while(idx != 99) {
       idx <- menu(choices, title = mtitle)

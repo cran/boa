@@ -1,0 +1,27 @@
+\HeaderA{boa.print.gandr}{Print Gelman and Rubin Convergence Diagnostics}{boa.print.gandr}
+\keyword{print}{boa.print.gandr}
+\begin{Description}\relax
+Calls boa.chain.gandr() and displays the Gelman and Rubin convergence 
+diagnostics for the MCMC sequences in the working session list of sequences.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+boa.print.gandr(alpha = boa.par("alpha"), win = boa.par("gandr.win"))
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{alpha}] Quantile (1 - alpha / 2) at which to estimate the upper limit of 
+the corrected shrink factor.
+\item[\code{win}] Proportion of iterations to include in the Brooks, Gelman, and 
+Rubin Statistics.
+\end{ldescription}
+\end{Arguments}
+\begin{Author}\relax
+Brian J. Smith
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{boa.chain.gandr}{boa.chain.gandr}}, \code{\LinkA{boa.plot}{boa.plot}},
+\code{\LinkA{boa.plot.bandg}{boa.plot.bandg}}, \code{\LinkA{boa.plot.gandr}{boa.plot.gandr}}
+\end{SeeAlso}
+

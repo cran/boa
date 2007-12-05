@@ -27,7 +27,7 @@ function(group)
             cat("\n", heading2, "\n",
                 rep("-", nchar(heading2)), "\n", sep = "")
          }
-         value <- deparse(globals[[i]])
+         value <- deparse(globals[[i]], control=NULL)
          cat(i, ")", rep(" ", mar1[i]), pardesc[i, "desc"], ":",
              rep(" ", mar2[i]), value[1], "\n", sep = "")
          for(j in seq(value)[-1])

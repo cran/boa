@@ -1,0 +1,26 @@
+\HeaderA{boa.chain.reset}{Reset MCMC Sequences}{boa.chain.reset}
+\keyword{utilities}{boa.chain.reset}
+\begin{Description}\relax
+Returns the data in the working list of MCMC sequences to the state it was in
+when originally imported. This function undoes any subsetting or collapsing
+that was done via the \code{\LinkA{boa.chain.collapse}{boa.chain.collapse}} or 
+\code{\LinkA{boa.chain.subset}{boa.chain.subset}} functions.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+boa.chain.reset()
+\end{verbatim}
+\end{Usage}
+\begin{Section}{Side Effects}
+Returns the data in the working list of MCMC sequences to the state it was in
+when originally imported. This function undoes any subsetting or collapsing
+that was done via the \code{\LinkA{boa.chain.collapse}{boa.chain.collapse}} or 
+\code{\LinkA{boa.chain.subset}{boa.chain.subset}} functions.
+\end{Section}
+\begin{Author}\relax
+Brian J. Smith
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{boa.chain.collapse}{boa.chain.collapse}}, \code{\LinkA{boa.chain.subset}{boa.chain.subset}}
+\end{SeeAlso}
+

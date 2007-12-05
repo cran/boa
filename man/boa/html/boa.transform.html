@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Transform Variables</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for boa.transform {boa}"><tr><td>boa.transform {boa}</td><td align="right">R Documentation</td></tr></table>
+<h2>Transform Variables</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Applies a log or logit transformation to map bounded variables to the entire 
+real line.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+boa.transform(x, support, inv = FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+Numeric object to be transformed.</td></tr>
+<tr valign="top"><td><code>support</code></td>
+<td>
+Vector giving the lower and upper limits of the support for 
+the untransformed data. Unbounded lower or upper limits should be specified 
+as -Inf or Inf, respectively.</td></tr>
+<tr valign="top"><td><code>inv</code></td>
+<td>
+Logical value indicating that the inverse transformation should be 
+applied.</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<p>
+Transformed or inverse-transformed analogue of 'x'.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Brian J. Smith
+</p>
+
+
+
+<hr><div align="center">[Package <em>boa</em> <a href="00Index.html">Index]</a></div>
+
+</body></html>

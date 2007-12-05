@@ -1,0 +1,47 @@
+boa.handw                package:boa                R Documentation
+
+_H_e_i_d_e_l_b_e_r_g_e_r _a_n_d _W_e_l_c_h _C_o_n_v_e_r_g_e_n_c_e _D_i_a_g_n_o_s_t_i_c_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Computes the Heidleberger and Welch convergence diagnostics for
+     the parameters in an MCMC sequence.
+
+_U_s_a_g_e:
+
+     boa.handw(link, error, alpha)
+
+_A_r_g_u_m_e_n_t_s:
+
+    link: Matrix whose columns and rows contain the monitored
+          parameters and the MCMC iterations, respectively. The
+          iteration numbers and parameter names must be assigned to
+          'dimnames(link)'.
+
+   error: Accuracy of the posterior estimates for the parameters.
+
+   alpha: Alpha level for the confidence in the sample mean of the
+          retained iterations.
+
+_V_a_l_u_e:
+
+     A matrix whose columns and rows are the Heidleberger and Welch
+     convergence diagnostics (i.e. stationarity test, number of
+     iterations to keep and to drop, Cramer-von-Mises statistic,
+     halfwidth test, mean, and halfwidth) and the monitored parameters,
+     respectively.
+
+_A_u_t_h_o_r(_s):
+
+     Brian J. Smith, Nicky Best, Kate Cowles
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Heidelberger, P. and Welch, P. (1983). Simulation run length
+     control in the presence of an initial transient. Operations
+     Research, 31, 1109-44.
+
+_S_e_e _A_l_s_o:
+
+     'boa.print.handw'
+

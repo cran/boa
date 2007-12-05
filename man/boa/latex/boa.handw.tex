@@ -1,0 +1,38 @@
+\HeaderA{boa.handw}{Heidelberger and Welch Convergence Diagnostics}{boa.handw}
+\keyword{univar}{boa.handw}
+\begin{Description}\relax
+Computes the Heidleberger and Welch convergence diagnostics for the
+parameters in an MCMC sequence.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+boa.handw(link, error, alpha)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{link}] Matrix whose columns and rows contain the monitored parameters
+and the MCMC iterations, respectively. The iteration numbers and parameter
+names must be assigned to \code{dimnames(link)}.
+\item[\code{error}] Accuracy of the posterior estimates for the parameters.
+\item[\code{alpha}] Alpha level for the confidence in the sample mean of the
+retained iterations.
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+A matrix whose columns and rows are the Heidleberger and Welch convergence
+diagnostics (i.e. stationarity test, number of iterations to keep and to drop,
+Cramer-von-Mises statistic, halfwidth test, mean, and halfwidth) and the
+monitored parameters, respectively.
+\end{Value}
+\begin{Author}\relax
+Brian J. Smith, Nicky Best, Kate Cowles
+\end{Author}
+\begin{References}\relax
+Heidelberger, P. and Welch, P. (1983). Simulation run length control
+in the presence of an initial transient. Operations Research, 31, 1109-44.
+\end{References}
+\begin{SeeAlso}\relax
+\code{\LinkA{boa.print.handw}{boa.print.handw}}
+\end{SeeAlso}
+

@@ -1,0 +1,54 @@
+\HeaderA{boa.plot}{Plot Parameters in MCMC Sequences}{boa.plot}
+\keyword{hplot}{boa.plot}
+\begin{Description}\relax
+Automatically generates the specified plot type for all parameters in the 
+working session list of MCMC sequences. This function takes care of all the 
+plotting tasks - opening windows, setting the number of plots per page, and 
+adding titles.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+boa.plot(type, dev = boa.par("dev"), mfdim = boa.par("plot.mfdim"),
+newplot = boa.par("plot.new"), onelink = boa.par("plot.onelink"),
+title = boa.par("title"))
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{type}] The type of plots to generate. The supported types are:
+\Itemize{
+\item "acf" = autocorrelation functions
+\item "bandg" = Brooks and Gelman multivariate shrink factors
+\item "density" = density functions
+\item "gandr" = Gelman and Rubin shrink factors
+\item "geweke" = Geweke convergence diagnostics
+\item "history" = running means
+\item "trace" = trace histories
+}
+\item[\code{dev}] Character string giving the name of the function that creates 
+graphics windows on the current platform. For Unix systems this is either 
+"motif", "openlook", or "X11". For windows, this should be set to "win.graph"
+\item[\code{mfdim}] Numeric vector giving the maximum number of rows and columns, 
+respectively, of plots to include in a single graphics window. If only one 
+graphics window is opened, 'mfdim' is proportionately scaled down so as to 
+minimize the number of empty frames within that window.
+\item[\code{newplot}] Logical value indicating that a new graphics window be 
+automatically opened. Otherwise, previous graphics windows will be closed.
+\item[\code{onelink}] Logical value indicating that each plot should include only 
+one MCMC sequence. Otherwise, all sequences are displayed on the same plot.
+\item[\code{title}] Logical value indicating that a title be added to the plot.
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+A logical value indicating that the plots were successfully created.
+\end{Value}
+\begin{Author}\relax
+Brian J. Smith
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{boa.plot.acf}{boa.plot.acf}}, \code{\LinkA{boa.plot.bandg}{boa.plot.bandg}},
+\code{\LinkA{boa.plot.density}{boa.plot.density}}, \code{\LinkA{boa.plot.gandr}{boa.plot.gandr}},
+\code{\LinkA{boa.plot.geweke}{boa.plot.geweke}}, \code{\LinkA{boa.plot.history}{boa.plot.history}},
+\code{\LinkA{boa.plot.trace}{boa.plot.trace}}
+\end{SeeAlso}
+

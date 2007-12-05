@@ -1,0 +1,50 @@
+boa.chain.import             package:boa             R Documentation
+
+_I_m_p_o_r_t _M_C_M_C _S_e_q_u_e_n_c_e
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Reads an MCMC sequence from an external file and adds it to the
+     session lists of sequences.
+
+_U_s_a_g_e:
+
+     boa.chain.import(prefix, path = boa.par("path"), type = "ASCII")
+
+_A_r_g_u_m_e_n_t_s:
+
+  prefix: Character string giving the prefix for the file(s) in which
+          the MCMC sequence is stored.
+
+    path: Character string giving the directory path in which the
+          file(s) subsides.
+
+    type: Character string specifying the type of data to be imported.
+          Currently, the supported types are:
+
+             *  "ASCII" : ASCII text file. Calls 'boa.importASCII' to
+                import data from "prefix.txt".
+
+             *  "BUGS" : BUGS output files. Calls 'boa.importBUGS' to
+                import data from "prefix.ind" and "prefix.out".
+
+             *  "S" : S data frame or matrix.
+
+_V_a_l_u_e:
+
+     A logical value indicating that the specified file(s) has been
+     successfully imported.
+
+_S_i_d_e _E_f_f_e_c_t_s:
+
+     The imported MCMC sequence is automatically added to the session
+     lists of sequences via a call to 'boa.chain.add'.
+
+_A_u_t_h_o_r(_s):
+
+     Brian J. Smith
+
+_S_e_e _A_l_s_o:
+
+     'boa.chain.add', 'boa.importASCII', 'boa.importBUGS'
+

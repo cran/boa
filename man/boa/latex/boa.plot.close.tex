@@ -1,0 +1,26 @@
+\HeaderA{boa.plot.close}{Close Graphics Windows}{boa.plot.close}
+\keyword{internal}{boa.plot.close}
+\begin{Description}\relax
+Closes graphics windows opened with boa.plot.open().
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+boa.plot.close(which = dev.cur())
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{which}] Integer vector specifying the graphics windows to be closed.
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+If the specified graphics windows are successfully closed, the number of the 
+current graphics window is returned. Otherwise NULL is returned.
+\end{Value}
+\begin{Author}\relax
+Brian J. Smith
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{boa.plot.open}{boa.plot.open}}
+\end{SeeAlso}
+

@@ -1,0 +1,27 @@
+\HeaderA{boa.print.stats}{Print Summary Statistics}{boa.print.stats}
+\keyword{print}{boa.print.stats}
+\begin{Description}\relax
+Iteratively calls boa.stats() to display summary statistics for the 
+parameters in each of the MCMC sequences in the working session list of 
+sequences.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+boa.print.stats(probs = boa.par("quantiles"), batch.size = boa.par("batch.size"))
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{probs}] Vector of probabilities at which to compute the quantiles. 
+Values must be between 0 and 1.
+\item[\code{batch.size}] Number of iterations to include in each batch when computing 
+batch means and lag-1 batch autocorrelation function.
+\end{ldescription}
+\end{Arguments}
+\begin{Author}\relax
+Brian J. Smith
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{boa.stats}{boa.stats}}
+\end{SeeAlso}
+

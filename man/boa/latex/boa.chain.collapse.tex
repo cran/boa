@@ -1,0 +1,23 @@
+\HeaderA{boa.chain.collapse}{Concatenate MCMC Sequences}{boa.chain.collapse}
+\keyword{utilities}{boa.chain.collapse}
+\begin{Description}\relax
+Concatenates together all of the MCMC sequences in the working session list
+of sequences. Only those parameters common to all sequences are kept.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+boa.chain.collapse()
+\end{verbatim}
+\end{Usage}
+\begin{Value}
+A logical value indicating that the MCMC sequences have been collapsed. If
+the sequences share no common parameters, no modifications are made to the
+working list and FALSE is returned.
+\end{Value}
+\begin{Author}\relax
+Brian J. Smith
+\end{Author}
+\begin{SeeAlso}\relax
+code{\LinkA{boa.chain.reset}{boa.chain.reset}}, code{\LinkA{boa.chain.subset}{boa.chain.subset}}
+\end{SeeAlso}
+

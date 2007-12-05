@@ -1,0 +1,45 @@
+boa.plot.bandg              package:boa              R Documentation
+
+_P_l_o_t _B_r_o_o_k_s _a_n_d _G_e_l_m_a_n _M_u_l_t_i_v_a_r_i_a_t_e _S_h_r_i_n_k _F_a_c_t_o_r_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Plots the Brooks and Gelman multivariate shrink factors within
+     different line  segments across the MCMC sequences. This
+     diagnostic is a multivariate  extension to the Gelman and Rubin
+     shrink factors.
+
+_U_s_a_g_e:
+
+     boa.plot.bandg(bins = boa.par("gandr.bins"), win = boa.par("gandr.win"),
+     annotate = boa.par("legend"))
+
+_A_r_g_u_m_e_n_t_s:
+
+    bins: Number of line segments within the MCMC sequence at which to
+          plot  the Gelman and Rubin shrink factors. The first segment
+          contains the first 50  iterations; the remaining iterations
+          are partitioned into equal bins and added  incrementally to
+          construct the remaining line segments. The shrink factors are
+           plotted against the maximum iteration number for the
+          segment. Cubic splines  are used to interpolate through the
+          point estimates for each segment.
+
+     win: Proportion of iterations to include in the Brooks, Gelman,
+          and  Rubin Statistics.
+
+annotate: Logical value indicating that a legend be included in the
+          plot.
+
+_V_a_l_u_e:
+
+     A logical value indicating that the plot was successfully created.
+
+_A_u_t_h_o_r(_s):
+
+     Brian J. Smith
+
+_S_e_e _A_l_s_o:
+
+     'boa.chain.gandr', 'boa.plot', 'boa.plot.gandr', 'boa.print.gandr'
+

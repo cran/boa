@@ -1,0 +1,27 @@
+\HeaderA{boa.print.par}{Print Global Parameters' Descriptions and Current Values}{boa.print.par}
+\keyword{print}{boa.print.par}
+\begin{Description}\relax
+Displays a description of and the current value for all global parameters.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+boa.print.par(group)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{group}] Character string specifying which parameter group to display.
+The groups are "Analysis", "Data", and "Plot". If omitted, information on 
+all global parameters is displayed.
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+The character matrix obtained from boa.pardesc() is returned, but not printed.
+\end{Value}
+\begin{Author}\relax
+Brian J. Smith
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{boa.pardesc}{boa.pardesc}}
+\end{SeeAlso}
+

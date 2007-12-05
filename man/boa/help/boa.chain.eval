@@ -1,0 +1,30 @@
+boa.chain.eval              package:boa              R Documentation
+
+_F_o_r_m_u_l_a_t_e _N_e_w _P_a_r_a_m_e_t_e_r
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Evaluates a user-specified expression to formulate a new parameter
+     in each of the system lists of MCMC sequences.
+
+_U_s_a_g_e:
+
+     boa.chain.eval(expr, pname)
+
+_A_r_g_u_m_e_n_t_s:
+
+    expr: S expression object used to formulate the new parameter.
+          Typically, the new parameter is a function of the existing
+          parameters.
+
+   pname: Name given to the new parameter.
+
+_S_i_d_e _E_f_f_e_c_t_s:
+
+     The specified parameter is added to the session lists of MCMC
+     sequences.
+
+_A_u_t_h_o_r(_s):
+
+     Brian J. Smith
+

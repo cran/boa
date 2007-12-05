@@ -1,0 +1,40 @@
+\HeaderA{boa.chain.info}{Information about MCMC Sequences}{boa.chain.info}
+\keyword{utilities}{boa.chain.info}
+\begin{Description}\relax
+Returns summary information from a list of MCMC sequences.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+boa.chain.info(chain, chain.support)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{chain}] List of matrices whose columns and rows contain the monitored
+parameters and the MCMC iterations, respectively. The iteration numbers and
+parameter names must be assigned to the dimnames.
+\item[\code{chain.support}] List of matrices whose columns and rows contain the
+monitored parameters and the support (lower and upper limits), respectively.
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+\begin{ldescription}
+\item[\code{lnames}] Character vector giving the names of the MCMC sequences in the
+session list of sequences.
+\item[\code{pnames}] List of character vectors giving the parameter names in each
+of the MCMC sequences.
+\item[\code{iter}] List of numeric vectors giving the iterations from each MCMC
+sequence.
+\item[\code{iter.range}] Matrix whose columns give the range of the iterations for
+the MCMC sequences named in the rows.
+\item[\code{support}] List of numeric vectors giving the support for the parameters
+in each of the MCMC sequences.
+\end{ldescription}
+\end{Value}
+\begin{Author}\relax
+Brian J. Smith
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{boa.print.info}{boa.print.info}}
+\end{SeeAlso}
+

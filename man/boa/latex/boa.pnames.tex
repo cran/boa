@@ -1,0 +1,27 @@
+\HeaderA{boa.pnames}{Extract Parameter Names}{boa.pnames}
+\keyword{internal}{boa.pnames}
+\begin{Description}\relax
+Extracts the parameter names in an MCMC sequence.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+boa.pnames(link)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{link}] Matrix whose columns and rows contain the monitored parameters 
+and the MCMC iterations, respectively. The iteration numbers and parameter 
+names must be assigned to \code{dimnames(link)}.
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+A character vector containing the parameter names in 'link'.
+\end{Value}
+\begin{Author}\relax
+Brian J. Smith
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{boa.getparms}{boa.getparms}}, \code{\LinkA{boa.iter}{boa.iter}}
+\end{SeeAlso}
+

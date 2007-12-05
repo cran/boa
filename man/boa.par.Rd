@@ -63,6 +63,8 @@ boa.par(...)
   data files are stored. The default may be used if the files are located in 
   the current working directory.  The specified path should not end with a
   slash(es).}
+  \item{par = list()}{List specifying graphics parameters passed to the \code{par}
+  function for the construction of new plots.}
   \item{plot.mfdim = c(3, 2)}{Numeric vector giving the maximum number of rows 
   and columns, respectively, of plots to include in a single graphics window.}
   \item{plot.new = F}{Logical value indicating that a new graphics window be 

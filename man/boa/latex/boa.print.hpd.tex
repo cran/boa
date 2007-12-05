@@ -1,0 +1,24 @@
+\HeaderA{boa.print.hpd}{Print Highest Probability Density Intervals}{boa.print.hpd}
+\keyword{print}{boa.print.hpd}
+\begin{Description}\relax
+Iteratively calls boa.hpd() to display the highest probability density (HPD) 
+intervals for the parameters in each of the MCMC sequences in the working 
+session list of sequences.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+boa.print.hpd(alpha = boa.par("alpha"))
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{alpha}] Specifies the 100*(1-alpha)\% HPD intervals to be computed.
+\end{ldescription}
+\end{Arguments}
+\begin{Author}\relax
+Brian J. Smith
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{boa.hpd}{boa.hpd}}
+\end{SeeAlso}
+

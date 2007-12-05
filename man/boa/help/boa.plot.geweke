@@ -1,0 +1,51 @@
+boa.plot.geweke             package:boa             R Documentation
+
+_P_l_o_t _G_e_w_e_k_e _C_o_n_v_e_r_g_e_n_c_e _D_i_a_g_n_o_s_t_i_c_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Creates a single plot of the Geweke convergence diagnostics within
+     different  line segments for a parameter in an MCMC sequence.
+
+_U_s_a_g_e:
+
+     boa.plot.geweke(lname, pname, bins = boa.par("geweke.bins"), p.first = boa.par("geweke.first"), p.last = boa.par("geweke.last"), alpha = boa.par("alpha"), annotate = boa.par("legend"))
+
+_A_r_g_u_m_e_n_t_s:
+
+   lname: Character string giving the name of the desired MCMC sequence
+          in  the working session list of sequences.
+
+   pname: Character string giving the name of the parameter to be
+          plotted.
+
+    bins: Number of line segments within the MCMC sequence at which to
+          plot  the Geweke convergence diagnostics. The ith line
+          segment contains the last  ((bins - i + 1) / bins)*100 bins.
+          This may lead to segments in which there are too few
+          iterations to  compute the convergence diagnostics. Such
+          segments, if they exist, are  automatically omitted from the
+          calculations.
+
+ p.first: Proportion of iterations to include in the first window.
+
+  p.last: Proportion of iterations to include in the last window.
+
+   alpha: Alpha level for the rejection region lines drawn on the
+          graph.
+
+annotate: Logical value indicating that a legend be included in the
+          plot.
+
+_V_a_l_u_e:
+
+     A logical value indicating that the plot was successfully created.
+
+_A_u_t_h_o_r(_s):
+
+     Brian J. Smith, Nicky Best, Kate Cowles
+
+_S_e_e _A_l_s_o:
+
+     'boa.geweke', 'boa.plot', 'boa.print.geweke'
+

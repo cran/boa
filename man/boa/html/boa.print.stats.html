@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Print Summary Statistics</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for boa.print.stats {boa}"><tr><td>boa.print.stats {boa}</td><td align="right">R Documentation</td></tr></table>
+<h2>Print Summary Statistics</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Iteratively calls boa.stats() to display summary statistics for the 
+parameters in each of the MCMC sequences in the working session list of 
+sequences.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+boa.print.stats(probs = boa.par("quantiles"), batch.size = boa.par("batch.size"))
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>probs</code></td>
+<td>
+Vector of probabilities at which to compute the quantiles. 
+Values must be between 0 and 1.</td></tr>
+<tr valign="top"><td><code>batch.size</code></td>
+<td>
+Number of iterations to include in each batch when computing 
+batch means and lag-1 batch autocorrelation function.</td></tr>
+</table>
+
+<h3>Author(s)</h3>
+
+<p>
+Brian J. Smith
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../../doc/html/search/SearchObject.html?boa.stats">boa.stats</a></code>
+</p>
+
+
+
+<hr><div align="center">[Package <em>boa</em> <a href="00Index.html">Index]</a></div>
+
+</body></html>

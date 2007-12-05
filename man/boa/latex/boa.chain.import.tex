@@ -1,0 +1,43 @@
+\HeaderA{boa.chain.import}{Import MCMC Sequence}{boa.chain.import}
+\keyword{utilities}{boa.chain.import}
+\begin{Description}\relax
+Reads an MCMC sequence from an external file and adds it to the session lists
+of sequences.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+boa.chain.import(prefix, path = boa.par("path"), type = "ASCII")
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{prefix}] Character string giving the prefix for the file(s) in which the
+MCMC sequence is stored.
+\item[\code{path}] Character string giving the directory path in which the file(s)
+subsides.
+\item[\code{type}] Character string specifying the type of data to be imported.
+Currently, the supported types are:
+\Itemize{
+\item "ASCII" : ASCII text file. Calls \code{\LinkA{boa.importASCII}{boa.importASCII}} to import
+data from "prefix.txt".
+\item "BUGS" : BUGS output files. Calls \code{\LinkA{boa.importBUGS}{boa.importBUGS}} to import
+data from "prefix.ind" and "prefix.out".
+\item "S" : S data frame or matrix.
+} 
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+A logical value indicating that the specified file(s) has been successfully imported.
+\end{Value}
+\begin{Section}{Side Effects}
+The imported MCMC sequence is automatically added to the session lists of
+sequences via a call to \code{\LinkA{boa.chain.add}{boa.chain.add}}.
+\end{Section}
+\begin{Author}\relax
+Brian J. Smith
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{boa.chain.add}{boa.chain.add}}, \code{\LinkA{boa.importASCII}{boa.importASCII}},
+\code{\LinkA{boa.importBUGS}{boa.importBUGS}}
+\end{SeeAlso}
+

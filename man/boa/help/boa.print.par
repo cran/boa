@@ -1,0 +1,32 @@
+boa.print.par              package:boa              R Documentation
+
+_P_r_i_n_t _G_l_o_b_a_l _P_a_r_a_m_e_t_e_r_s' _D_e_s_c_r_i_p_t_i_o_n_s _a_n_d _C_u_r_r_e_n_t _V_a_l_u_e_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Displays a description of and the current value for all global
+     parameters.
+
+_U_s_a_g_e:
+
+     boa.print.par(group)
+
+_A_r_g_u_m_e_n_t_s:
+
+   group: Character string specifying which parameter group to display.
+          The groups are "Analysis", "Data", and "Plot". If omitted,
+          information on  all global parameters is displayed.
+
+_V_a_l_u_e:
+
+     The character matrix obtained from boa.pardesc() is returned, but
+     not printed.
+
+_A_u_t_h_o_r(_s):
+
+     Brian J. Smith
+
+_S_e_e _A_l_s_o:
+
+     'boa.pardesc'
+

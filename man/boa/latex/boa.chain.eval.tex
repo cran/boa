@@ -1,0 +1,25 @@
+\HeaderA{boa.chain.eval}{Formulate New Parameter}{boa.chain.eval}
+\keyword{utilities}{boa.chain.eval}
+\begin{Description}\relax
+Evaluates a user-specified expression to formulate a new parameter in each of
+the system lists of MCMC sequences.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+boa.chain.eval(expr, pname)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{expr}] S expression object used to formulate the new parameter.
+Typically, the new parameter is a function of the existing parameters.
+\item[\code{pname}] Name given to the new parameter.
+\end{ldescription}
+\end{Arguments}
+\begin{Section}{Side Effects}
+The specified parameter is added to the session lists of MCMC sequences.
+\end{Section}
+\begin{Author}\relax
+Brian J. Smith
+\end{Author}
+

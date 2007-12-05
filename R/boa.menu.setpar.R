@@ -25,9 +25,11 @@ function(group)
          "character" = { cat("\nEnter new character string\n")
                          value <- scan(what = "", n = 1, sep = "\n")
                        },
-         "logical"   = value <- boa.getinput("\nEnter new logical value\n"),
          "function"  = value <- boa.getinput("\nEnter new function followed by a blank line\n",
                                              n = -1),
+         "list" = value <- boa.getinput("\nEnter new list of values followed by a blank line\n",
+                                        n = -1),
+         "logical"   = value <- boa.getinput("\nEnter new logical value\n"),
          value <- NULL
       )
       boa.par(structure(list(value), names = par.names[idx]))
