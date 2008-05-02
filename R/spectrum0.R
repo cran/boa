@@ -39,7 +39,7 @@ do.spectrum0 <- function (x, max.freq = 0.5, order = 1)
                 f2 = f2, spec = spec[1 + (1:Nfreq)], inset = I(freq <= 
                   max.freq))
             glm.out <- glm(fmla, family = Gamma(link = "log"), 
-                data = spec.data, subset = inset)
+                data = spec.data, subset = spec.data$inset)
             v0[i] <- predict(glm.out, type = "response", newdata = data.frame(spec = 0, 
                 one = 1, f1 = -sqrt(3), f2 = sqrt(5)))
         }

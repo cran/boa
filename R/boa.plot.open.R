@@ -2,7 +2,7 @@
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 {
-   do.call(options()$dev, args = list())
+   do.call(options()$device, args = list())
    created <- dev.cur()
    boa.par(dev.list = intersect(c(boa.par("dev.list"), created), dev.list()))
 

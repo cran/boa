@@ -23,13 +23,14 @@ function()
                      "data [none]\n")
                  value <- scan(what = "", n = 1, strip.white = TRUE)
                  if(length(value)) {
-                    if(exists(value)) {
+                    if(!boa.save(value)) {
                        cat("Object already exists.  Overwrite (y/n) [n]?\n")
                        saveas <- scan(what = "", n = 1, strip.white = TRUE)
                     }
-                    if(length(saveas) > 0 && (saveas == "y")
-                       && boa.save(value))
+                    if(length(saveas) > 0 && saveas == "y") {
+                       boa.save(value, replace = TRUE)
                        cat("+++ Data successfully saved +++\n")
+						  }
                  }
                },
          "5" = { cat("\nEnter name of object to load [none]\n")

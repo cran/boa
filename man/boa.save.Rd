@@ -7,7 +7,7 @@
   parameters to a database object.
 }
 \usage{
-boa.save(name, envir = globalenv())
+boa.save(name, envir = globalenv(), replace = FALSE)
 }
 
 \arguments{
@@ -15,6 +15,8 @@ boa.save(name, envir = globalenv())
   current session should be saved.}
   \item{envir}{The 'environment' to which the object should be saved. For more 
   information, consult the help documentation in R on the assign() function.}
+  \item{replace}{Logical value indicating whether object \code{name} should be
+  replaced if it already exists.}
 }
 
 \value{
