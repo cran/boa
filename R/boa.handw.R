@@ -25,9 +25,7 @@ function(link, error, alpha)
          if(abs(halfwidth[i] / xbar[i]) <= error)  htest[i] <- "passed"
          B <- cumsum(parm) - xbar[i] * 1:n.parm
          Bsq <- (B * B) / (n.parm * S0[i])
-         I[i] <- (2 * sum(Bsq[seq(2, n.parm - 2, by = 2)]) +
-                  4 * sum(Bsq[seq(1, n.parm - 1, by = 2)]) + Bsq[n.parm]) /
-                 (3 * n.parm)
+         I[i] <- sum(Bsq) / n.parm
          if(I[i] < 0.46) {
             stest[i] <- "passed"
          } else {

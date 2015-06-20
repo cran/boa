@@ -17,7 +17,8 @@ function(link, lname)
       }
       master <- boa.chain("master")
       master.support <- boa.chain("master.support")
-      master[[lname]] <- boa.sortparms(link)
+      # master[[lname]] <- boa.sortparms(link)
+      master[[lname]] <- link
       master.support[[lname]] <- matrix(c(-Inf, Inf), nrow = 2,
                                         ncol = ncol(link))
       dimnames(master.support[[lname]]) <- list(c("Min", "Max"),
