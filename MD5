@@ -1,5 +1,5 @@
-b85b0568f963c04f0a80ee73b0ae68d8 *DESCRIPTION
-706cdc7b8567df7d1036448521920759 *NAMESPACE
+de086f0751dc8a725e3236e975eab192 *DESCRIPTION
+7ae49e147340bfef045086ba362cb6c8 *NAMESPACE
 69213546b2abe6381710a6198b502226 *R/boa.acf.R
 bd0537b5cb6b7cbc6b445ad37e3bd1bf *R/boa.batchMeans.R
 f4d524498e76d6ccd1fdd613540b7990 *R/boa.chain.add.R
@@ -72,7 +72,7 @@ bd3977568cec7e9a99b6b7d2b5473b95 *R/boa.transform.R
 ac86f11f62cb69aaef03b695c8df0cbe *R/boa.version.R
 ce77db12deac238c78414f05f666ba3b *R/colVars.R
 e781e9b404b8a3017e1fa169c1828fd5 *R/spectrum0.R
-275cd35ddedccdf82946706b0bbd9421 *data/line.rda
+37b89cecf8aa8b5a780620980db59bb0 *data/line.rda
 3cb3093867fb07334d4567a93919c56b *inst/CITATION
 cc088635c7edc4a87b7d5dafe8fb9cf3 *man/boa.acf.Rd
 0e5e167ae54c6ece481fca70d5a230bc *man/boa.batchMeans.Rd
